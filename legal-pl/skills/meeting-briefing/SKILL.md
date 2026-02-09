@@ -1,6 +1,6 @@
 ---
 name: meeting-briefing
-description: Przygotowuj ustrukturyzowane briefy przed spotkaniami o znaczeniu prawnym i śledź wynikające z nich zadania. Używaj przy przygotowaniu do negocjacji umów, posiedzeń zarządu, przeglądów compliance lub dowolnego spotkania wymagającego kontekstu prawnego, research'u lub śledzenia zadań.
+description: Przygotowuj ustrukturyzowane briefy przed spotkaniami o znaczeniu prawnym i śledź wynikające z nich zadania. Używaj przy przygotowaniu do negocjacji umów, posiedzeń zarządu, przeglądów compliance lub dowolnego spotkania wymagającego kontekstu prawnego, badania lub śledzenia zadań.
 ---
 
 # Briefing przed spotkaniem
@@ -223,7 +223,7 @@ Pomóż użytkownikowi uchwycić i zorganizować zadania wynikające ze spotkani
 
 ### Dobre praktyki dotyczące zadań
 
-- **Bądź konkretny**: "Wysłać redline § 4.2 do kancelarii kontrahenta" zamiast "Follow-up ws. umowy"
+- **Bądź konkretny**: "Wysłać propozycję zmiany § 4.2 do kancelarii kontrahenta" zamiast "Follow-up ws. umowy"
 - **Przypisz odpowiedzialnego**: Każde zadanie musi mieć dokładnie jednego właściciela (nie zespół czy grupę)
 - **Wyznacz termin**: Każde zadanie wymaga konkretnej daty, nie "wkrótce" ani "jak najszybciej"
 - **Odnotuj zależności**: Jeśli zadanie zależy od innego działania lub informacji zewnętrznej, zaznacz to

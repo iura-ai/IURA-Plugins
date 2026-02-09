@@ -60,10 +60,10 @@ Ryzyka prawne ocenia się w dwóch wymiarach:
 
 | Zakres wyniku | Poziom ryzyka | Kolor |
 |---|---|---|
-| 1–4 | **Niskie ryzyko** | GREEN |
-| 5–9 | **Średnie ryzyko** | YELLOW |
-| 10–15 | **Wysokie ryzyko** | ORANGE |
-| 16–25 | **Krytyczne ryzyko** | RED |
+| 1–4 | **Niskie ryzyko** | ZIELONY |
+| 5–9 | **Średnie ryzyko** | ŻÓŁTY |
+| 10–15 | **Wysokie ryzyko** | POMARAŃCZOWY |
+| 16–25 | **Krytyczne ryzyko** | CZERWONY |
 
 ### Wizualizacja macierzy ryzyka
 
@@ -81,7 +81,7 @@ Znikoma   (1) |   1    |    2   |    3   |    4   |       5      |
 
 ## Poziomy klasyfikacji ryzyka z zalecanymi działaniami
 
-### GREEN — Niskie ryzyko (Wynik 1–4)
+### ZIELONY — Niskie ryzyko (Wynik 1–4)
 
 **Charakterystyka**:
 - Drobne zagadnienia o niskim prawdopodobieństwie materializacji
@@ -99,7 +99,7 @@ Znikoma   (1) |   1    |    2   |    3   |    4   |       5      |
 - Standardowa umowa NDA z uznanym kontrahentem podlegająca prawu polskiemu
 - Rutynowe zadanie compliance z jasnym terminem i właścicielem
 
-### YELLOW — Średnie ryzyko (Wynik 5–9)
+### ŻÓŁTY — Średnie ryzyko (Wynik 5–9)
 
 **Charakterystyka**:
 - Umiarkowane zagadnienia mogące zmaterializować się w przewidywalnych okolicznościach
@@ -143,7 +143,7 @@ Znikoma   (1) |   1    |    2   |    3   |    4   |       5      |
 - Zarzut naruszenia praw autorskich lub patentowych z wiarygodną podstawą
 - Zapytanie kontrolne UOKiK, KNF lub UODO; wezwanie w ramach kontroli podatkowej
 
-### RED — Krytyczne ryzyko (Wynik 16–25)
+### CZERWONY — Krytyczne ryzyko (Wynik 16–25)
 
 **Charakterystyka**:
 - Poważne zagadnienia o wysokim prawdopodobieństwie lub pewności materializacji
@@ -198,7 +198,7 @@ Każda formalna ocena ryzyka powinna być udokumentowana według poniższej stru
 #### Ocena prawdopodobieństwa: [1–5] — [Etykieta]
 [Uzasadnienie oceny prawdopodobieństwa, w tym precedensy, zdarzenia wyzwalające i aktualne warunki]
 
-#### Wynik ryzyka: [Wynik] — [GREEN/YELLOW/ORANGE/RED]
+#### Wynik ryzyka: [Wynik] — [ZIELONY/ŻÓŁTY/POMARAŃCZOWY/CZERWONY]
 
 ### 4. Czynniki zwiększające ryzyko
 [Jakie czynniki zwiększają ryzyko]
@@ -240,7 +240,7 @@ Do śledzenia w rejestrze ryzyk zespołu:
 | Dotkliwość | 1–5 z etykietą |
 | Prawdopodobieństwo | 1–5 z etykietą |
 | Wynik ryzyka | Obliczony wynik |
-| Poziom ryzyka | GREEN / YELLOW / ORANGE / RED |
+| Poziom ryzyka | ZIELONY / ŻÓŁTY / POMARAŃCZOWY / CZERWONY |
 | Właściciel | Osoba odpowiedzialna za monitoring |
 | Środki mitygacji | Aktualne mechanizmy kontrolne |
 | Status | Otwarte / Zmitygowane / Zaakceptowane / Zamknięte |

@@ -2,15 +2,15 @@
 name: tabular-review
 description: >
   Bulk-review multiple legal documents (contracts, leases, NDAs, loan agreements, SPAs, MSAs, etc.)
-  by extracting structured data into an Excel spreadsheet under Polish law. Each document becomes a
-  row; each review question becomes a column. Enhanced with IURA MCP for real-time Polish case law
-  lookup, statutory verification, and precedent-backed risk classification. Use when the user wants
-  to review, compare, or analyze a set of legal documents side by side, extract key terms from a
-  document portfolio, perform due diligence across a data room, audit a contract portfolio, or
-  produce a spreadsheet summarizing clauses, risks, dates, obligations, or deviations across
-  multiple agreements. Also trigger when the user mentions "przegląd tabelaryczny", "matryca
+  przez ekstrakcję ustrukturyzowanych danych do arkusza Excel w prawie polskim. Każdy dokument staje się
+  wierszem; każde pytanie przeglądowe staje się kolumną. Wzbogacony o IURA MCP dla wyszukiwania orzecznictwa
+  polskiego w czasie rzeczywistym, weryfikacji przepisów i klasyfikacji ryzyka opartej na precedensach. Używaj gdy użytkownik chce
+  przeglądać, porównywać lub analizować zbiór dokumentów prawnych obok siebie, wyodrębniać kluczowe terminy z
+  portfela dokumentów, przeprowadzać due diligence w data roomie, audytować portfel umów lub
+  tworzyć arkusz podsumowujący klauzule, ryzyka, daty, zobowiązania lub odstępstwa w wielu
+  umowach. Również wyzwalaj gdy użytkownik wspomina "przegląd tabelaryczny", "matryca
   dokumentów", "porównanie umów", "ekstrakcja klauzul", "due diligence", "audyt portfela umów",
-  or wants any kind of structured, multi-document legal analysis delivered as a spreadsheet.
+  lub chce jakąkolwiek ustrukturyzowaną, wielodokumentową analizę prawną dostarczoną jako arkusz kalkulacyjny.
 ---
 
 # Przegląd tabelaryczny (Tabular Review)
@@ -97,7 +97,7 @@ Gdy umowy podlegają prawu polskiemu, dla każdego dokumentu:
 - Sprawdź zachowanie wymaganych elementów formalnych (np. forma pisemna pod rygorem
   nieważności, wskazanie pól eksploatacji przy przeniesieniu praw autorskich)
 
-**Zasada ogólna**: Żadna klasyfikacja RED nie powinna być przedstawiana bez uprzedniego
+**Zasada ogólna**: Żadna klasyfikacja CZERWONY nie powinna być przedstawiana bez uprzedniego
 przeszukania baz IURA pod kątem aktualnego orzecznictwa i stanu prawnego.
 
 ## Proces pracy
@@ -120,7 +120,7 @@ Kolumny określają, jakie dane wyodrębnić. Ustal je we współpracy z użytko
 **Jeśli użytkownik opisuje ogólny cel** (np. „due diligence tych umów najmu"): Zaproponuj
 zestaw kolumn, przedstaw do potwierdzenia.
 
-**Jeśli użytkownik ma playbook**: Wyprowadź kolumny ze standardowych pozycji playbooka.
+**Jeśli użytkownik ma playbook negocjacyjny**: Wyprowadź kolumny ze standardowych pozycji playbooka.
 
 #### Typy kolumn
 
@@ -133,7 +133,7 @@ zestaw kolumn, przedstaw do potwierdzenia.
 | **Okres** | Okres czasu | „Okres obowiązywania" | „36 miesięcy" |
 | **Tak/Nie** | Ustalenie binarne | „Zawiera zakaz konkurencji?" | „Tak" |
 | **Lista** | Wiele elementów | „Wyłączenia spod limitu" | „Naruszenie IP; Wina umyślna" |
-| **Ryzyko** | Flaga GREEN/YELLOW/RED | „Kary umowne" | „YELLOW — brak limitu łącznego" |
+| **Ryzyko** | Flaga ZIELONY/ŻÓŁTY/CZERWONY | „Kary umowne" | „ŻÓŁTY — brak limitu łącznego" |
 
 #### Rekomendowane zestawy kolumn według typu dokumentu
 
@@ -150,7 +150,7 @@ przedłużenie · 14. Cesja praw i obowiązków · 15. Kluczowe zobowiązania ·
 w życie · 5. Okres obowiązywania · 6. Okres karencji poufności · 7. Definicja informacji
 poufnych — odniesienie do art. 11 UZNK · 8. Standardowe wyłączenia obecne? · 9. Non-solicitation?
 10. Non-compete? · 11. Klauzula residuals? · 12. Kary umowne za naruszenie · 13. Prawo właściwe
-14. Ogólna klasyfikacja ryzyka (GREEN/YELLOW/RED)
+14. Ogólna klasyfikacja ryzyka (ZIELONY/ŻÓŁTY/CZERWONY)
 
 **Umowy najmu:**
 1. Nazwa dokumentu · 2. Wynajmujący / Najemca · 3. Adres nieruchomości · 4. Data rozpoczęcia
@@ -195,12 +195,12 @@ Dla każdego dokumentu systematycznie wyodrębnij odpowiedź na każde pytanie k
   (np. „Kara umowna — art. 483 KC"). Użyj **Search_DU** do weryfikacji aktualnego brzmienia.
 
 **Dla kolumn typu Ryzyko:**
-- **GREEN**: Zgodne ze standardami rynkowymi i przepisami bezwzględnie obowiązującymi.
-- **YELLOW**: Poza preferowaną pozycją, ale negocjowalne; spotykane na rynku.
-- **RED**: Poza akceptowalnym zakresem; wymaga eskalacji. Obejmuje klauzule potencjalnie
+- **ZIELONY**: Zgodne ze standardami rynkowymi i przepisami bezwzględnie obowiązującymi.
+- **ŻÓŁTY**: Poza preferowaną pozycją, ale negocjowalne; spotykane na rynku.
+- **CZERWONY**: Poza akceptowalnym zakresem; wymaga eskalacji. Obejmuje klauzule potencjalnie
   nieważne na gruncie prawa polskiego.
 
-Jeśli playbook jest dostępny, oceniaj względem jego pozycji. W przeciwnym razie stosuj ogólne
+Jeśli playbook negocjacyjny jest dostępny, oceniaj względem jego pozycji. W przeciwnym razie stosuj ogólne
 standardy rynkowe. **Obowiązkowo** przeszukaj IURA (Search_SN, Search_SP) dla wsparcia
 klasyfikacji orzecznictwem.
 
@@ -213,7 +213,7 @@ napisaniem kodu Excel.
 
 **Arkusz 1: „Podsumowanie"**
 - Wiersz tytułowy z nazwą przeglądu, datą i liczbą dokumentów
-- Statystyki: łączna liczba dokumentów, rozkład ryzyka (GREEN/YELLOW/RED)
+- Statystyki: łączna liczba dokumentów, rozkład ryzyka (ZIELONY/ŻÓŁTY/CZERWONY)
 - Legenda kolorowania
 - Kluczowe ustalenia IURA (najistotniejsze przepisy i orzeczenia przywołane w przeglądzie)
 
@@ -221,8 +221,8 @@ napisaniem kodu Excel.
 - Wiersz 1: Nagłówki, pogrubione, autofiltr · Kolumna A: Nr · Kolumna B: Nazwa dokumentu
 - Formatowanie: biały tekst na ciemnoniebieskim tle nagłówka (RGB: 1F4E79), zamrożony panel,
   naprzemienne cieniowanie wierszy, auto-szerokość (min 15, max 50), zawijanie tekstu
-- Kolumny Ryzyko: GREEN → jasnozielone tło (C6EFCE), YELLOW → jasnożółte (FFEB9C),
-  RED → jasnoczerwone (FFC7CE)
+- Kolumny Ryzyko: ZIELONY → jasnozielone tło (C6EFCE), ŻÓŁTY → jasnożółte (FFEB9C),
+  CZERWONY → jasnoczerwone (FFC7CE)
 
 **Arkusz 3: „Źródła"** (rekomendowany)
 - Jeden wiersz na dokument, każda komórka zawiera odniesienie do źródła odpowiadające komórce
@@ -252,7 +252,7 @@ napisaniem kodu Excel.
 ### Krok 6: Dostarczenie
 
 Zapisz plik Excel i przedstaw użytkownikowi:
-- Zwięzłe podsumowanie (np. „Przejrzano 15 umów. 3 z RED dot. odpowiedzialności, 7 z YELLOW
+- Zwięzłe podsumowanie (np. „Przejrzano 15 umów. 3 z CZERWONY dot. odpowiedzialności, 7 z ŻÓŁTY
   dot. kar umownych. 2 klauzule potencjalnie nieważne na gruncie art. 483 § 1 KC.")
 - Link do pliku
 - Kluczowe orzeczenia i przepisy przywołane w analizie
@@ -292,16 +292,16 @@ odpowiedniego skilla wraz z kontekstem i wynikami wyszukiwań IURA MCP.
 
 ## Integracja z playbookiem
 
-Jeśli organizacja ma skonfigurowany playbook (w `legal.local.md` lub analogicznym):
+Jeśli organizacja ma skonfigurowany playbook negocjacyjny (w `legal.local.md` lub analogicznym):
 - Wyprowadź domyślne zestawy kolumn z pozycji playbooka
-- Używaj progów playbooka do klasyfikacji GREEN/YELLOW/RED
+- Używaj progów playbooka do klasyfikacji ZIELONY/ŻÓŁTY/CZERWONY
 - Dołącz kolumnę „Odstępstwo od playbooka" flagującą postanowienia poza zakresem
-- Odwołuj się do kryteriów eskalacji przy flagowaniu RED
+- Odwołuj się do kryteriów eskalacji przy flagowaniu CZERWONY
 - Uzupełnij pozycje playbooka o aktualne orzecznictwo z IURA MCP — pozycja playbooka
   może się zdezaktualizować, jeśli linia orzecznicza uległa zmianie
 
-Jeśli playbook nie jest skonfigurowany:
+Jeśli playbook negocjacyjny nie jest skonfigurowany:
 - Zaznacz, że oceny opierają się na ogólnych standardach rynkowych i polskim ius cogens
 - Zaproponuj pomoc w stworzeniu playbooka na podstawie wzorców z dokumentów (np. „Zauważam,
   że Państwa umowy stosują 12-miesięczny limit odpowiedzialności — skodyfikować jako standard?")
-- Użyj **Search_SN** aby zaproponować pozycje oparte na dominującej linii orzeczniczej SN
+- Użyj **Search_SN** aby zaproponować pozycje oparte na dominującej linii orzeczniczej Sądu Najwyższego

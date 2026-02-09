@@ -1,6 +1,6 @@
 ---
 name: nda-triage
-description: Screen incoming NDAs (umowy o zachowaniu poufności) under Polish law and classify them as GREEN (standard), YELLOW (needs review), or RED (significant issues). Use when a new NDA comes in from sales or business development, when assessing NDA risk level, or when deciding whether an NDA needs full counsel review in a Polish legal context.
+description: Wstępna ocena przychodzących umów NDA (umowy o zachowaniu poufności) w prawie polskim i klasyfikacja jako ZIELONY (standard), ŻÓŁTY (wymaga przeglądu) lub CZERWONY (istotne problemy). Używaj gdy nowa NDA przychodzi z działu sprzedaży lub rozwoju biznesu, przy ocenie poziomu ryzyka NDA lub przy decyzji, czy NDA wymaga pełnego przeglądu prawnego w kontekście prawa polskiego.
 ---
 
 # Triage umów NDA (Umowy o zachowaniu poufności)
@@ -34,7 +34,7 @@ Przed przystąpieniem do oceny NDA i w jej trakcie korzystaj z narzędzi IURA MC
 
 ### Analiza orzecznicza dla klauzul problemowych
 
-2. Dla klauzul YELLOW lub RED użyj **Search_SN** aby wyszukać orzeczenia Sądu Najwyższego dotyczące:
+2. Dla klauzul ŻÓŁTY lub CZERWONY użyj **Search_SN** aby wyszukać orzeczenia Sądu Najwyższego dotyczące:
    - Zakresu pojęcia tajemnicy przedsiębiorstwa
    - Wykonalności klauzul poufności
    - Kar umownych w NDA
@@ -121,9 +121,9 @@ Wszystkie poniższe wyłączenia powinny być obecne:
 - [ ] **Właściwość sądu**: Sąd powszechny właściwy dla strony pozwanej lub siedziby strony ujawniającej
 - [ ] **Arbitraż**: W standardowych NDA preferowane jest postępowanie przed sądem powszechnym; arbitraż jest bardziej uzasadniony przy umowach międzynarodowych
 
-## Klasyfikacja GREEN / YELLOW / RED
+## Klasyfikacja ZIELONY / ŻÓŁTY / CZERWONY
 
-### GREEN — Standardowe zatwierdzenie
+### ZIELONY — Standardowe zatwierdzenie
 
 **Wszystkie** poniższe warunki muszą być spełnione:
 - NDA jest wzajemna (lub jednostronna we właściwym kierunku)
@@ -140,7 +140,7 @@ Wszystkie poniższe wyłączenia powinny być obecne:
 
 **Procedowanie**: Zatwierdzenie w trybie standardowej delegacji uprawnień. Przegląd przez radcę prawnego niewymagany.
 
-### YELLOW — Wymagany przegląd prawnika
+### ŻÓŁTY — Wymagany przegląd prawnika
 
 **Jeden lub więcej** z poniższych warunków jest obecny, ale NDA nie jest fundamentalnie problematyczna:
 - Definicja informacji poufnych szersza niż preferowana, ale nie nieuzasadniona
@@ -154,9 +154,9 @@ Wszystkie poniższe wyłączenia powinny być obecne:
 - Zwrot/zniszczenie bez wyraźnego wyjątku retencyjnego (prawdopodobnie dorozumiany, ale powinien być dodany)
 - Nietypowe, ale nieszkodliwe postanowienia (np. obowiązek powiadomienia o potencjalnym naruszeniu)
 
-**Procedowanie**: Oznacz konkretne kwestie do przeglądu przez radcę prawnego. Radca prawny prawdopodobnie rozwiąże je przy użyciu drobnych redline'ów w jednej rundzie. **Użyj Search_SN/Search_SP aby dostarczyć radcy orzecznictwo wspierające rekomendowane pozycje.**
+**Procedowanie**: Oznacz konkretne kwestie do przeglądu przez radcę prawnego. Radca prawny prawdopodobnie rozwiąże je przy użyciu drobnych propozycji zmian w jednej rundzie. **Użyj Search_SN/Search_SP aby dostarczyć radcy orzecznictwo wspierające rekomendowane pozycje.**
 
-### RED — Istotne problemy
+### CZERWONY — Istotne problemy
 
 **Jeden lub więcej** z poniższych warunków jest obecny:
 - **Jednostronna, gdy wymagana wzajemna** (lub w niewłaściwym kierunku)
@@ -179,16 +179,16 @@ Wszystkie poniższe wyłączenia powinny być obecne:
 
 ### Problem: Nadmiernie szeroka definicja informacji poufnych
 **Standardowa pozycja**: Informacje poufne powinny być ograniczone do informacji niepublicznych ujawnionych w związku z określonym celem, z jasnymi wyłączeniami. W prawie polskim definicja powinna być spójna z pojęciem tajemnicy przedsiębiorstwa z art. 11 ust. 2 UZNK.
-**Podejście redline**: Zawęź definicję do informacji oznaczonych jako poufne lub takich, które rozsądna osoba uznałaby za poufne biorąc pod uwagę ich charakter i okoliczności ujawnienia.
+**Podejście do propozycji zmiany**: Zawęź definicję do informacji oznaczonych jako poufne lub takich, które rozsądna osoba uznałaby za poufne biorąc pod uwagę ich charakter i okoliczności ujawnienia.
 
 ### Problem: Brak wyłączenia niezależnego opracowania
 **Standardowa pozycja**: Musi zawierać wyłączenie dla informacji niezależnie opracowanych bez odniesienia do lub wykorzystania informacji poufnych strony ujawniającej.
 **Ryzyko w razie braku**: Może generować roszczenia, że wewnętrznie opracowane produkty lub funkcje wywodzą się z informacji poufnych kontrahenta. W polskim prawie ciężar dowodu spoczywa na stronie powołującej się na to wyłączenie.
-**Podejście redline**: Dodaj standardowe wyłączenie niezależnego opracowania.
+**Podejście do propozycji zmiany**: Dodaj standardowe wyłączenie niezależnego opracowania.
 
 ### Problem: Klauzula zakazu zatrudniania (non-solicitation)
 **Standardowa pozycja**: Klauzule non-solicitation nie należą do NDA. Są właściwe w umowach o pracę, umowach M&A lub specyficznych umowach handlowych. W polskim prawie taka klauzula w NDA może być kwestionowana jako wykraczająca poza cel umowy.
-**Podejście redline**: Usuń postanowienie w całości. Jeśli kontrahent nalega, ogranicz do celowego pozyskiwania (nie ogólnej rekrutacji) i ustal krótki okres (12 miesięcy).
+**Podejście do propozycji zmiany**: Usuń postanowienie w całości. Jeśli kontrahent nalega, ogranicz do celowego pozyskiwania (nie ogólnej rekrutacji) i ustal krótki okres (12 miesięcy).
 
 ### Problem: Szeroka klauzula residuals
 **Standardowa pozycja**: Sprzeciwiaj się klauzulom residuals. Jeśli wymagana, ogranicz do: (a) ogólnych idei, koncepcji, know-how lub technik zachowanych w pamięci osób, które miały autoryzowany dostęp; (b) wyraźnie wyklucz tajemnice przedsiębiorstwa i informacje patentowalne; (c) nie przyznaje żadnej licencji IP.
@@ -197,12 +197,12 @@ Wszystkie poniższe wyłączenia powinny być obecne:
 ### Problem: Bezterminowy obowiązek poufności
 **Standardowa pozycja**: 2-5 lat od ujawnienia lub rozwiązania umowy, w zależności od tego, co nastąpi później. Tajemnice przedsiębiorstwa mogą uzasadniać ochronę tak długo, jak zachowują status tajemnicy.
 **Kontekst polski**: Art. 11 UZNK chroni tajemnicę przedsiębiorstwa niezależnie od umowy, więc bezterminowa klauzula w NDA jest mniej problematyczna niż w systemach common law, ale mimo to preferowany jest określony termin.
-**Podejście redline**: Zastąp bezterminowy obowiązek określonym terminem. Zaproponuj wyłączenie dla tajemnic przedsiębiorstwa zapewniające dłuższą ochronę.
+**Podejście do propozycji zmiany**: Zastąp bezterminowy obowiązek określonym terminem. Zaproponuj wyłączenie dla tajemnic przedsiębiorstwa zapewniające dłuższą ochronę.
 
 ### Problem: Kary umowne w NDA
 **Kontekst polski**: Kary umowne (art. 483-485 KC) mogą być zastrzeżone tylko za niewykonanie zobowiązań niepieniężnych. Naruszenie obowiązku poufności jest zobowiązaniem niepieniężnym, więc kara umowna jest dopuszczalna. Sąd może jednak miarkować rażąco wygórowaną karę (art. 484 § 2 KC).
 **Standardowa pozycja**: Kary umowne w NDA nie są standardem rynkowym w Polsce, ale są dopuszczalne. Jeśli obecne, powinny być w rozsądnej wysokości i wzajemne.
-**Podejście redline**: Preferuj usunięcie. Jeśli kontrahent nalega, negocjuj rozsądną kwotę z zastrzeżeniem prawa do dochodzenia odszkodowania przenoszącego karę (art. 484 § 1 KC in fine).
+**Podejście do propozycji zmiany**: Preferuj usunięcie. Jeśli kontrahent nalega, negocjuj rozsądną kwotę z zastrzeżeniem prawa do dochodzenia odszkodowania przenoszącego karę (art. 484 § 1 KC in fine).
 
 ## Rekomendacje procedowania
 
@@ -210,12 +210,12 @@ Po klasyfikacji rekomenduj odpowiedni następny krok:
 
 | Klasyfikacja | Rekomendowane działanie | Typowy termin |
 |---|---|---|
-| GREEN | Zatwierdzenie i skierowanie do podpisu zgodnie z delegacją uprawnień | Tego samego dnia |
-| YELLOW | Przekazanie wyznaczonemu radcy prawnemu z oznaczonymi konkretnymi kwestiami | 1-2 dni robocze |
-| RED | Pełny przegląd prawny; przygotowanie kontrpropozycji lub standardowej NDA organizacji | 3-5 dni roboczych |
+| ZIELONY | Zatwierdzenie i skierowanie do podpisu zgodnie z delegacją uprawnień | Tego samego dnia |
+| ŻÓŁTY | Przekazanie wyznaczonemu radcy prawnemu z oznaczonymi konkretnymi kwestiami | 1-2 dni robocze |
+| CZERWONY | Pełny przegląd prawny; przygotowanie kontrpropozycji lub standardowej NDA organizacji | 3-5 dni roboczych |
 
-Dla klasyfikacji YELLOW i RED:
+Dla klasyfikacji ŻÓŁTY i CZERWONY:
 - Wskaż konkretną osobę lub rolę, która powinna dokonać przeglądu (jeśli organizacja ma zdefiniowane zasady procedowania)
 - Dołącz zwięzłe podsumowanie kwestii pozwalające osobie przeglądającej szybko zrozumieć kluczowe zagadnienia
-- Jeśli organizacja posiada standardowy wzór NDA, rekomenduj wysłanie go jako kontrpropozycji dla NDA sklasyfikowanych jako RED
+- Jeśli organizacja posiada standardowy wzór NDA, rekomenduj wysłanie go jako kontrpropozycji dla NDA sklasyfikowanych jako CZERWONY
 - **Dołącz wyniki wyszukiwania IURA MCP** — orzecznictwo i przepisy wspierające rekomendację
