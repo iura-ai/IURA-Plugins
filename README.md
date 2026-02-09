@@ -1,32 +1,43 @@
-# Knowledge Work Plugins
+# Legal Plugins for Claude
 
-Plugins that turn Claude into a specialist for your role, team, and company. Built for [Claude Cowork](https://claude.com/product/cowork), also compatible with [Claude Code](https://claude.com/product/claude-code).
+Plugins that turn Claude into a specialist for lawyers to streamline their workflows. Built for [Claude Cowork](https://claude.com/product/cowork), also compatible with [Claude Code](https://claude.com/product/claude-code).
+
+This repository is based on [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) and focuses specifically on legal workflows.
 
 ## Why Plugins
 
 Cowork lets you set the goal and Claude delivers finished, professional work. Plugins let you go further: tell Claude how you like work done, which tools and data to pull from, how to handle critical workflows, and what slash commands to expose — so your team gets better and more consistent outcomes.
 
-Each plugin bundles the skills, connectors, slash commands, and sub-agents for a specific job function. Out of the box, they give Claude a strong starting point for helping anyone in that role. The real power comes when you customize them for your company — your tools, your terminology, your processes — so Claude works like it was built for your team.
+The legal plugins bundle the skills, connectors, slash commands, and sub-agents specifically designed for legal professionals. Out of the box, they give Claude a strong starting point for helping anyone in a legal role. The real power comes when you customize them for your firm or legal department — your tools, your terminology, your processes — so Claude works like it was built for your team.
 
-## Plugin Marketplace
+**💡 Recommended:** Both plugins work best when connected to [IURA MCP](https://iura.io) — a legal knowledge base providing access to over 1.5 million Polish legal documents including court rulings, legislation, and tax interpretations. While the Polish plugin (`legal-pl`) has IURA MCP built-in, the English plugin (`legal-en`) can also benefit from IURA for Polish law research when needed.
 
-We're open-sourcing 11 plugins built and inspired by our own work:
+## Plugins
 
-| Plugin | How it helps | Connectors |
-|--------|-------------|------------|
-| **[productivity](./productivity)** | Manage tasks, calendars, daily workflows, and personal context so you spend less time repeating yourself. | Slack, Notion, Asana, Linear, Jira, Monday, ClickUp, Microsoft 365 |
-| **[sales](./sales)** | Research prospects, prep for calls, review your pipeline, draft outreach, and build competitive battlecards. | Slack, HubSpot, Close, Clay, ZoomInfo, Notion, Jira, Fireflies, Microsoft 365 |
-| **[customer-support](./customer-support)** | Triage tickets, draft responses, package escalations, research customer context, and turn resolved issues into knowledge base articles. | Slack, Intercom, HubSpot, Guru, Jira, Notion, Microsoft 365 |
-| **[product-management](./product-management)** | Write specs, plan roadmaps, synthesize user research, keep stakeholders updated, and track the competitive landscape. | Slack, Linear, Asana, Monday, ClickUp, Jira, Notion, Figma, Amplitude, Pendo, Intercom, Fireflies |
-| **[marketing](./marketing)** | Draft content, plan campaigns, enforce brand voice, brief on competitors, and report on performance across channels. | Slack, Canva, Figma, HubSpot, Amplitude, Notion, Ahrefs, SimilarWeb, Klaviyo |
-| **[legal](./legal)** | Review contracts, triage NDAs, navigate compliance, assess risk, prep for meetings, and draft templated responses. | Slack, Box, Egnyte, Jira, Microsoft 365 |
-| **[finance](./finance)** | Prep journal entries, reconcile accounts, generate financial statements, analyze variances, manage close, and support audits. | Snowflake, Databricks, BigQuery, Slack, Microsoft 365 |
-| **[data](./data)** | Query, visualize, and interpret datasets — write SQL, run statistical analysis, build dashboards, and validate your work before sharing. | Snowflake, Databricks, BigQuery, Hex, Amplitude, Jira |
-| **[enterprise-search](./enterprise-search)** | Find anything across email, chat, docs, and wikis — one query across all your company's tools. | Slack, Notion, Guru, Jira, Asana, Microsoft 365 |
-| **[bio-research](./bio-research)** | Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D. | PubMed, BioRender, bioRxiv, ClinicalTrials.gov, ChEMBL, Synapse, Wiley, Owkin, Open Targets, Benchling |
-| **[cowork-plugin-management](./cowork-plugin-management)** | Create new plugins or customize existing ones for your organization's specific tools and workflows. | — |
+| Plugin | How it helps | Key features |
+|--------|-------------|--------------|
+| **[legal-en](./legal-en)** | Review contracts, triage NDAs, navigate compliance, assess risk, prep for meetings, draft templated responses, and perform bulk document reviews. | English language, general international legal practice |
+| **[legal-pl](./legal-pl)** | Przegląd umów, triaż NDA, compliance, ocena ryzyka, przygotowanie spotkań, szablony odpowiedzi, masowy przegląd dokumentów. | Polish language, Polish law (KC, KSH, RODO, UZNK), **IURA MCP integration** with 1.5M+ Polish legal documents |
+| **[legal-nl](./legal-nl)** | Beoordeel contracten, triageer NDA's, navigeer compliance, beoordeel risico, bereid vergaderingen voor, maak gestandaardiseerde antwoorden en voer bulk documentbeoordelingen uit. | Dutch language, Dutch law (Burgerlijk Wetboek, AVG/GDPR, AP) |
 
-Install these directly from Cowork, browse the full collection here on GitHub, or build your own.
+### IURA MCP Integration
+
+**Both plugins work best with IURA MCP** — a legal knowledge base providing access to over 1.5 million Polish legal documents. The Polish plugin (`legal-pl`) has IURA MCP pre-configured, while the English plugin (`legal-en`) can be enhanced by adding IURA MCP to its `.mcp.json` for Polish law research.
+
+[IURA MCP](https://iura.dev) provides access to:
+
+- **Orzecznictwo sądów powszechnych** — common court rulings (Search_SP)
+- **Orzecznictwo Sądu Najwyższego** — Supreme Court rulings (Search_SN)
+- **Orzecznictwo NSA/WSA** — administrative court rulings (Search_CBOSA)
+- **Trybunał Konstytucyjny** — Constitutional Tribunal rulings (Search_TK)
+- **Krajowa Izba Odwoławcza** — public procurement rulings (Search_KIO)
+- **Dziennik Ustaw** — legislation in force (Search_DU)
+- **Interpretacje podatkowe** — tax interpretations (Search_IP)
+- **Aktualności prawne** — legal news (Search_News)
+
+**In `legal-pl`:** Every skill proactively uses IURA to verify current law, find precedents, and cite sources with case signatures and legal references.
+
+**In `legal-en`:** Add IURA MCP to enable Polish law research when reviewing contracts with Polish governing law or working with Polish counterparties.
 
 ## Getting Started
 
@@ -38,13 +49,21 @@ Install plugins from [claude.com/plugins](https://claude.com/plugins/).
 
 ```bash
 # Add the marketplace first
-claude plugin marketplace add anthropics/knowledge-work-plugins
+claude plugin marketplace add iura-ai/iura-plugins
 
-# Then install a specific plugin
-claude plugin install sales@knowledge-work-plugins
+# Install the English legal plugin
+claude plugin install legal-en@iura-plugins
+
+# Or install the Polish legal plugin (includes IURA MCP)
+claude plugin install legal-pl@iura-plugins
+
+# Or install the Dutch legal plugin
+claude plugin install legal-nl@iura-plugins
 ```
 
-Once installed, plugins activate automatically. Skills fire when relevant, and slash commands are available in your session (e.g., `/sales:call-prep`, `/data:write-query`).
+**💡 For best results:** Connect [IURA MCP](https://iura.dev) to enable real-time legal research. The Polish plugin includes IURA by default. For the English plugin, add IURA MCP to `.mcp.json` to enable Polish law research capabilities.
+
+Once installed, the plugin activates automatically. Skills fire when relevant, and slash commands are available in your session (e.g., `/legal:review-contract`, `/legal:triage-nda`).
 
 ## How Plugins Work
 
@@ -59,21 +78,38 @@ plugin-name/
 ```
 
 - **Skills** encode the domain expertise, best practices, and step-by-step workflows Claude needs to give you useful help. Claude draws on them automatically when relevant.
-- **Commands** are explicit actions you trigger (e.g., `/finance:reconciliation`, `/product-management:write-spec`).
-- **Connectors** wire Claude to the external tools your role depends on — CRMs, project trackers, data warehouses, design tools, and more — via [MCP servers](https://modelcontextprotocol.io/).
+- **Commands** are explicit actions you trigger (e.g., `/legal:review-contract`, `/legal:triage-nda`).
+- **Connectors** wire Claude to the external tools your role depends on — document storage, chat, legal databases, and more — via [MCP servers](https://modelcontextprotocol.io/).
 
 Every component is file-based — markdown and JSON, no code, no infrastructure, no build steps.
 
-## Making Them Yours
+## Skills Overview
 
-These plugins are generic starting points. They become much more useful when you customize them for how your company actually works:
+Both plugins include the following skills:
 
+| Skill | Description |
+|-------|-------------|
+| `contract-review` | Playbook-based contract analysis, deviation classification, redline generation |
+| `nda-triage` | NDA screening criteria, classification rules, routing recommendations |
+| `compliance` | Privacy regulations, DPA review, data subject requests |
+| `canned-responses` | Template management, response categories, escalation triggers |
+| `legal-risk-assessment` | Risk severity framework, classification levels, escalation criteria |
+| `meeting-briefing` | Meeting prep methodology, context gathering, action item tracking |
+| `tabular-review` | Bulk document review into structured Excel spreadsheets |
+
+The Polish plugin (legal-pl) enhances each skill with IURA MCP integration for real-time legal research.
+
+## Making It Yours
+
+The legal plugins are starting points. They become much more useful when you customize them for how your firm or legal department actually works:
+
+- **Connect IURA MCP** — Add IURA MCP to `.mcp.json` for real-time access to Polish legal databases (court rulings, legislation, tax interpretations). Essential for Polish law work, highly recommended for international practice.
 - **Swap connectors** — Edit `.mcp.json` to point at your specific tool stack.
-- **Add company context** — Drop your terminology, org structure, and processes into skill files so Claude understands your world.
+- **Add firm context** — Drop your terminology, org structure, and processes into skill files so Claude understands your world.
 - **Adjust workflows** — Modify skill instructions to match how your team actually does things, not how a textbook says to.
-- **Build new plugins** — Use the `cowork-plugin-management` plugin or follow the structure above to create plugins for roles and workflows we haven't covered yet.
+- **Configure your playbook** — Create a `legal.local.md` file with your organization's standard contract positions, risk tolerances, and negotiation strategies.
 
-As your team builds and shares plugins, Claude becomes a cross-functional expert. The context you define gets baked into every relevant interaction, so leaders and admins can spend less time enforcing processes and more time improving them.
+As your team customizes and shares plugins, Claude becomes a legal expert tailored to your organization. The context you define gets baked into every relevant interaction, so legal teams can spend less time on routine tasks and more time on strategic work.
 
 ## Contributing
 

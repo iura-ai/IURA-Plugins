@@ -1,63 +1,23 @@
 {
-  "name": "knowledge-work-plugins",
+  "name": "iura-plugins",
   "owner": {
-    "name": "Anthropic"
+    "name": "iura-ai"
   },
   "plugins": [
     {
-      "name": "productivity",
-      "source": "./productivity",
-      "description": "Manage tasks, plan your day, and build up memory of important context about your work. Syncs with your calendar, email, and chat to keep everything organized and on track."
+      "name": "legal-en",
+      "source": "./legal-en",
+      "description": "Speed up contract review, NDA triage, compliance workflows, and bulk document reviews for in-house legal teams. Draft legal briefs, organize precedent research, and manage institutional knowledge."
     },
     {
-      "name": "enterprise-search",
-      "source": "./enterprise-search",
-      "description": "Search across all of your company's tools in one place. Find anything across email, chat, documents, and wikis without switching between apps."
+      "name": "legal-pl",
+      "source": "./legal-pl",
+      "description": "Plugin prawny dla polskich zespołów prawnych. Przegląd umów, triaż NDA, compliance, masowy przegląd dokumentów — wzbogacony o IURA MCP z dostępem do orzecznictwa polskich sądów, Dziennika Ustaw i interpretacji podatkowych."
     },
     {
-      "name": "cowork-plugin-management",
-      "source": "./cowork-plugin-management",
-      "description": "Create, customize, and manage plugins tailored to your organization's tools and workflows. Configure MCP servers, adjust plugin behavior, and adapt templates to match how your team works."
-    },
-    {
-      "name": "sales",
-      "source": "./sales",
-      "description": "Prospect, craft outreach, and build deal strategy faster. Prep for calls, manage your pipeline, and write personalized messaging that moves deals forward."
-    },
-    {
-      "name": "finance",
-      "source": "./finance",
-      "description": "Streamline finance and accounting workflows, from journal entries and reconciliation to financial statements and variance analysis. Speed up audit prep, month-end close, and keeping your books clean."
-    },
-    {
-      "name": "data",
-      "source": "./data",
-      "description": "Write SQL, explore datasets, and generate insights faster. Build visualizations and dashboards, and turn raw data into clear stories for stakeholders."
-    },
-    {
-      "name": "legal",
-      "source": "./legal",
-      "description": "Speed up contract review, NDA triage, and compliance workflows for in-house legal teams. Draft legal briefs, organize precedent research, and manage institutional knowledge."
-    },
-    {
-      "name": "marketing",
-      "source": "./marketing",
-      "description": "Create content, plan campaigns, and analyze performance across marketing channels. Maintain brand voice consistency, track competitors, and report on what's working."
-    },
-    {
-      "name": "customer-support",
-      "source": "./customer-support",
-      "description": "Triage tickets, draft responses, escalate issues, and build your knowledge base. Research customer context and turn resolved issues into self-service content."
-    },
-    {
-      "name": "product-management",
-      "source": "./product-management",
-      "description": "Write feature specs, plan roadmaps, and synthesize user research faster. Keep stakeholders updated and stay ahead of the competitive landscape."
-    },
-    {
-      "name": "bio-research",
-      "source": "./bio-research",
-      "description": "Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D"
+      "name": "legal-nl",
+      "source": "./legal-nl",
+      "description": "Versnel contractbeoordeling, NDA-triaging en compliance workflows voor Nederlandse juridische teams. Maak juridische notities, organiseer precedentonderzoek en beheer institutionele kennis. Bulk documentbeoordeling naar gestructureerde Excel-spreadsheets."
     }
   ]
 }

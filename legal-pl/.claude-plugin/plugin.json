@@ -1,0 +1,8 @@
+{
+  "name": "legal-pl",
+  "version": "2.0.0",
+  "description": "Przyspieszenie przeglądu umów, triażu NDA, compliance i workflow prawniczych dla polskich zespołów prawnych. Wzbogacone o integrację z IURA MCP — dostęp do orzecznictwa sądów polskich, Dziennika Ustaw i interpretacji podatkowych.",
+  "author": {
+    "name": "TaKo AI"
+  }
+}
