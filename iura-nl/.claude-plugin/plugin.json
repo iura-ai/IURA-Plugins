@@ -1,0 +1,8 @@
+{
+  "name": "iura-nl",
+  "version": "2.0.0",
+  "description": "IURA plugin voor Nederlandse juridische teams. Contractbeoordeling, NDA-triaging en compliance workflows — met IURA MCP integratie. In voorbereiding.",
+  "author": {
+    "name": "TaKo AI"
+  }
+}

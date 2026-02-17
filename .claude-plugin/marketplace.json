@@ -1,0 +1,18 @@
+{
+  "name": "iura-plugins",
+  "owner": {
+    "name": "iura-ai"
+  },
+  "plugins": [
+    {
+      "name": "iura-pl",
+      "source": "./iura-pl",
+      "description": "Plugin IURA dla polskich zespołów prawnych. Przegląd umów, triaż NDA, generowanie NDA, masowy przegląd dokumentów — z integracją IURA MCP (orzecznictwo, Dziennik Ustaw, interpretacje podatkowe)."
+    },
+    {
+      "name": "iura-nl",
+      "source": "./iura-nl",
+      "description": "IURA plugin voor Nederlandse juridische teams. Contractbeoordeling, NDA-triaging en compliance workflows — met IURA MCP integratie. In voorbereiding."
+    }
+  ]
+}

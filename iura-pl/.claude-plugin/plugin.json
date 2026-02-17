@@ -1,0 +1,8 @@
+{
+  "name": "iura-pl",
+  "version": "2.0.0",
+  "description": "Plugin IURA dla polskich zespołów prawnych. Przegląd umów, triaż NDA, generowanie NDA, masowy przegląd dokumentów — z integracją IURA MCP (orzecznictwo sądów polskich, Dziennik Ustaw, interpretacje podatkowe).",
+  "author": {
+    "name": "TaKo AI"
+  }
+}
