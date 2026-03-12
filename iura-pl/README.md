@@ -19,6 +19,10 @@ Modele AI halucynują cytowania prawne — wymyślają sygnatury orzeczeń, cytu
 
 Plugin jest świetny sam w sobie. Z IURA MCP jest kompletny.
 
+## Wymagania techniczne dla dokumentów wyjściowych
+
+Przy generowaniu dokumentów (PDF, Excel, HTML, DOCX) **zawsze** używaj czcionek z pełną obsługą polskich znaków diakrytycznych (ą, ę, ć, ń, ó, ś, ź, ż, ł). Brak obsługi tych znaków powoduje nieprawidłowe wyświetlanie tekstu — np. w eksportach PDF czy arkuszach Excel.
+
 ## Instalacja
 
 ```

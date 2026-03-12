@@ -166,6 +166,7 @@ Na podstawie klasyfikacji:
 
 ## Uwagi
 
+- Przy generowaniu raportów triażu (PDF, DOCX, HTML) używaj wyłącznie czcionek z obsługą polskich znaków (ą, ę, ć, ń, ó, ś, ź, ż, ł)
 - Jeśli dokument nie jest w rzeczywistości NDA (np. jest oznaczony jako NDA, ale zawiera istotne warunki handlowe), natychmiast oznacz jako CZERWONY i rekomenduj pełny przegląd umowy
 - Dla NDA będących częścią większej umowy (np. sekcja poufności w umowie ramowej), zanotuj, że szerszy kontekst umowy może wpływać na analizę
 - Zawsze zaznaczaj, że to narzędzie przesiewowe — prawnik powinien przejrzeć wszelkie kwestie, co do których użytkownik ma wątpliwości

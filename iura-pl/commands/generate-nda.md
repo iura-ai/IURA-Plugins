@@ -98,6 +98,7 @@ Wygeneruj kompletną umowę NDA w formacie Word (.docx) zawierającą:
 13. **Podpisy**: Miejsca na podpisy obu stron z oznaczeniem osób reprezentujących
 
 **Formatowanie Word:**
+- **Czcionki**: Używaj wyłącznie czcionek z obsługą polskich znaków (ą, ę, ć, ń, ó, ś, ź, ż, ł) — np. Times New Roman, Arial, Calibri, DejaVu Sans
 - Czcionka: Times New Roman 11pt lub Arial 10pt
 - Interlinea: 1.15
 - Marginesy: 2.5 cm (standardowe)

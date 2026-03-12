@@ -220,6 +220,7 @@ Podczas generowania propozycji zmian:
 4. **Przedstaw pozycje awaryjne**: Dla elementów ŻÓŁTY dołącz pozycję awaryjną na wypadek odrzucenia pierwotnej propozycji.
 5. **Ustal priorytety**: Nie wszystkie propozycje zmian mają równą wagę. Wskaż, które są bezwzględne, a które pożądane.
 6. **Uwzględnij relację**: Dostosuj ton i podejście w zależności od tego, czy to nowy dostawca, partner strategiczny czy dostawca commodity.
+7. **Czcionki**: Przy generowaniu dokumentów (PDF, redline, DOCX, HTML) używaj wyłącznie czcionek z obsługą polskich znaków (ą, ę, ć, ń, ó, ś, ź, ż, ł).
 
 ### Format propozycji zmiany
 

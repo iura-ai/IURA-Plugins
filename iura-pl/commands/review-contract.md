@@ -178,6 +178,7 @@ Ustrukturyzuj wynik następująco:
 
 ## Uwagi
 
+- Przy generowaniu dokumentów (PDF, redline, DOCX) używaj wyłącznie czcionek z obsługą polskich znaków (ą, ę, ć, ń, ó, ś, ź, ż, ł)
 - Umowy w języku innym niż polski analizuj w języku oryginału, ale raport przygotuj po polsku
 - Dla bardzo długich umów (50+ stron) zaproponuj skupienie się na najistotniejszych częściach, a następnie pełny przegląd
 - Zawsze przypominaj, że analiza powinna być zweryfikowana przez wykwalifikowanego prawnika przed podjęciem wiążących decyzji

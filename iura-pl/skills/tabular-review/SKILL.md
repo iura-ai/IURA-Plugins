@@ -184,6 +184,7 @@ napisaniem kodu Excel.
 
 #### Dobre praktyki Excel
 
+- **Czcionki**: Ustaw czcionkę arkusza Excel (openpyxl) na font obsługujący polskie znaki (np. Calibri, Arial, DejaVu Sans) — unikaj fontów bez pełnej obsługi Unicode dla polskich znaków (ą, ę, ć, ń, ó, ś, ź, ż, ł).
 - Komentarze do komórek (openpyxl) jako alternatywa dla osobnego arkusza źródeł
 - Walidacja danych dla kolumn Tak/Nie (lista: Tak / Nie / Brak regulacji)
 - Nazwane zakresy dla głównej tabeli danych

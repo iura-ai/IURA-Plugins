@@ -132,6 +132,7 @@ Prezentuj znalezione dane do potwierdzenia przed generowaniem draftu.
 ## Formatowanie dokumentu Word
 
 **Wymagania techniczne:**
+- **Czcionki**: Zawsze używaj czcionek z obsługą polskich znaków (ą, ę, ć, ń, ó, ś, ź, ż, ł). Przykłady: Times New Roman 11pt, Arial 10pt, Calibri, DejaVu Sans — unikaj fontów bez pełnej obsługi Unicode.
 - Czcionka: Times New Roman 11pt lub Arial 10pt
 - Interlinea: 1.15
 - Marginesy: 2.5 cm (wszystkie strony)

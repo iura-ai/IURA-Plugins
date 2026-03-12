@@ -143,6 +143,9 @@ Notatka prawna **nie jest brief'em** — nie przekonujesz, lecz analizujesz. Prz
 - Definiuj terminy techniczne przy pierwszym użyciu
 - Krótkie zdania, aktywna strona
 
+### Czcionki
+- Przy eksporcie notatki do PDF, DOCX lub HTML używaj wyłącznie czcionek z obsługą polskich znaków (ą, ę, ć, ń, ó, ś, ź, ż, ł).
+
 ### Długość
 - **Krótka notatka** (1 proste pytanie): 2-4 strony
 - **Standardowa notatka** (1-2 pytania z sub-issues): 5-10 stron

@@ -198,3 +198,5 @@ Gdy narzędzia nie zwrócą odpowiednich wyników:
 ## Rozbieżności w orzecznictwie
 
 Gdy znajdziesz sprzeczne linie orzecznicze, przedstaw obie z sygnaturami i wskaż, która jest nowsza/dominująca. Prawnik musi mieć pełny obraz — to jest jedna z najcenniejszych rzeczy, jakie możesz zrobić dzięki dostępowi do baz orzecznictwa.
+
+**Czcionki**: Przy generowaniu dokumentów (PDF, DOCX, HTML) używaj wyłącznie czcionek z obsługą polskich znaków (ą, ę, ć, ń, ó, ś, ź, ż, ł).

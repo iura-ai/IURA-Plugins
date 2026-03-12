@@ -140,6 +140,7 @@ Zapisz plik Excel i przedstaw użytkownikowi wraz ze zwięzłym podsumowaniem:
 
 ## Uwagi
 
+- Używaj wyłącznie czcionek z obsługą polskich znaków (ą, ę, ć, ń, ó, ś, ź, ż, ł) przy budowie arkusza Excel (np. Calibri, Arial, DejaVu Sans)
 - Dla zbiorów zawierających różne typy dokumentów, zaproponuj osobne arkusze per typ lub nadrzędny zestaw kolumn z „N/D"
 - Jeśli playbook jest skonfigurowany w `iura.local.md`, użyj jego progów ryzyka; w przeciwnym razie stosuj ogólne standardy rynkowe
 - Zawsze przypominaj, że wyekstrahowane dane powinny być zweryfikowane przez wykwalifikowanego prawnika

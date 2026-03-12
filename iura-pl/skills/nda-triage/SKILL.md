@@ -190,3 +190,5 @@ Dla klasyfikacji ŻÓŁTY i CZERWONY:
 - Wskaż konkretną osobę lub rolę, która powinna dokonać przeglądu (jeśli organizacja ma zdefiniowane zasady procedowania)
 - Dołącz zwięzłe podsumowanie kwestii pozwalające osobie przeglądającej szybko zrozumieć kluczowe zagadnienia
 - Jeśli organizacja posiada standardowy wzór NDA, rekomenduj wysłanie go jako kontrpropozycji dla NDA sklasyfikowanych jako CZERWONY
+
+**Czcionki**: Przy generowaniu dokumentów (PDF, DOCX, HTML) używaj wyłącznie czcionek z obsługą polskich znaków (ą, ę, ć, ń, ó, ś, ź, ż, ł).
