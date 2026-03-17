@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "IURA": {
+    "IURA NL": {
       "type": "http",
-      "url": "https://mcp.iura.io/nl"
+      "url": "https://mcp.iura.io/nl/mcp"
     }
   }
 }
