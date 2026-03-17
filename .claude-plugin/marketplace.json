@@ -12,7 +12,12 @@
     {
       "name": "iura-nl",
       "source": "./iura-nl",
-      "description": "IURA plugin voor Nederlandse juridische teams. Contractbeoordeling, NDA-triaging en compliance workflows — met IURA MCP integratie. In voorbereiding."
+      "description": "IURA-plugin voor Nederlandse juridische teams. Contractbeoordeling, NDA-triaging, NDA-generatie, juridische notities, tabellarische documentbeoordeling en conclusie van antwoord — met IURA MCP-integratie (Nederlandse jurisprudentie)."
+    },
+    {
+      "name": "iura-eu",
+      "source": "./iura-eu",
+      "description": "IURA plugin for EU law — ECtHR (HUDOC), CJEU (InfoCuria), and EU legislation (Treaties, Regulations, Directives). Coming soon."
     }
   ]
 }

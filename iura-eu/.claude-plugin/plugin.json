@@ -1,0 +1,8 @@
+{
+  "name": "iura-eu",
+  "version": "0.1.0",
+  "description": "IURA plugin for EU law — ECtHR (HUDOC), CJEU (InfoCuria), and EU legislation (Treaties, Regulations, Directives). Coming soon.",
+  "author": {
+    "name": "IURA"
+  }
+}

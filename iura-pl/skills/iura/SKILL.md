@@ -62,8 +62,8 @@ Narzędzia IURA używają **wyszukiwania semantycznego** — NIE szukaj konkretn
 | "Czy mogę..." / "Czy jest legalne..." | `Search_DU` + `Search_SN` + `Search_SP` | Przepis + jak sądy interpretują |
 | "Jak sądy orzekają w sprawach..." | `Search_SN` + `Search_SP` | Szukaj różnych linii orzeczniczych |
 | Przegląd umowy / analiza klauzuli | `Search_DU` + `Search_SN` + `Search_SP` | Przepisy + orzecznictwo dot. spornych klauzul |
-| Decyzja administracyjna / skarga WSA | `Search_CBOSA` + `Search_DU` | Orzecznictwo NSA/WSA + przepisy |
-| Spory podatkowe | `Search_CBOSA` + `Search_IP` + `Search_DU` | Sądy administracyjne + fiskus + przepisy |
+| Decyzja administracyjna / skarga WSA | `Search_NSA` / `Search_WSA` + `Search_DU` | Orzecznictwo NSA/WSA + przepisy |
+| Spory podatkowe | `Search_NSA` / `Search_WSA` + `Search_IP` + `Search_DU` | Sądy administracyjne + fiskus + przepisy |
 | Rozliczenie podatku | `Search_DU` + `Search_IP` | Przepis + stanowisko fiskusa |
 | Konstytucyjność przepisu | `Search_TK` + `Search_DU` | Orzeczenia TK + kontekst ustawowy |
 | Procedura przetargowa | `Search_KIO` + `Search_DU` | PZP + praktyka KIO |
@@ -77,7 +77,7 @@ Rekomendowana kolejność wyszukiwania:
 
 1. **Zacznij od przepisów** → `Search_DU` z `in_force_as_of` = dzisiejsza data — ustal aktualny stan prawny
 2. **Dla spornych klauzul** → `Search_SN` (wykładnia wiążąca) + `Search_SP` (praktyka sądowa)
-3. **Jeśli aspekt podatkowy** → `Search_IP` + opcjonalnie `Search_CBOSA` (spory z organami)
+3. **Jeśli aspekt podatkowy** → `Search_IP` + opcjonalnie `Search_NSA` / `Search_WSA` (spory z organami)
 4. **Jeśli wątpliwości konstytucyjne** → `Search_TK`
 5. **Jeśli zamówienia publiczne** → `Search_KIO`
 6. **Na koniec** → `Search_News` żeby sprawdzić najnowsze zmiany w prawie
@@ -99,7 +99,7 @@ Rekomendowana kolejność wyszukiwania:
 - Używaj `date_from`/`date_to` do analizy zmian linii orzeczniczej w czasie
 - **SN + SP razem**: SN daje wykładnię zasadniczą (uchwały, wyrok precedensowy), SP pokazuje jak sądy niższej instancji ją stosują w praktyce
 
-### Search_CBOSA (sądy administracyjne)
+### Search_NSA / Search_WSA (sądy administracyjne)
 - Wyniki mogą nie zawierać daty orzeczenia — polegaj na sygnaturze do identyfikacji
 - Łącz z `Search_IP` przy sporach podatkowych — daje obraz z dwóch perspektyw (sąd vs. organ)
 
@@ -148,7 +148,7 @@ Rekomendowana kolejność wyszukiwania:
 **Zapytania**:
 - Search_DU: `"koszty uzyskania przychodu CIT najem"` (in_force_as_of: dzisiaj)
 - Search_IP: `"koszty najmu mieszkania CIT działalność gospodarcza"`
-- Search_CBOSA: `"koszty uzyskania przychodu najem prywatny CIT"`
+- Search_NSA / Search_WSA: `"koszty uzyskania przychodu najem prywatny CIT"`
 
 ### Przykład 5: Zamówienia publiczne
 
