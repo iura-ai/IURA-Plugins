@@ -22,13 +22,51 @@ Jeśli playbook nie jest dostępny:
 - Kontynuując bez playbooka, zastosuj powszechnie akceptowane standardy rynkowe jako punkt odniesienia, z uwzględnieniem polskich przepisów bezwzględnie obowiązujących (ius cogens)
 - Wyraźnie oznacz przegląd jako „oparty na ogólnych standardach rynkowych i polskim prawie" zamiast pozycji organizacji
 
+### Dopytaj o kontekst przed analizą
+
+Jeśli z rozmowy nie wynikają jasno poniższe parametry, **zadaj 2-3 krótkie pytania
+zanim zaczniesz analizę** — bez nich rekomendacje mogą trafić obok celu:
+
+1. **Charakter relacji**: B2B czy z udziałem konsumenta? (konsument → klauzule
+   abuzywne art. 385¹-385³ KC, zupełnie inny reżim)
+2. **Strona użytkownika**: Dostawca, zamawiający, licencjodawca, licencjobiorca?
+3. **Profil i branża**: Czym zajmuje się organizacja użytkownika i czego dotyczy
+   wdrożenie/usługa? (wpływa na wagę poszczególnych ryzyk i dobór przepisów —
+   nie stosuj przepisów sektorowych spoza branży kontrahenta)
+
+Jeśli użytkownik nie odpowie lub prosi o analizę od razu — przyjmij najbardziej
+prawdopodobne założenia, **wypisz je jawnie na początku analizy** i kontynuuj.
+
 ### Proces przeglądu
 
 1. **Zidentyfikuj typ umowy**: Umowa SaaS, umowa o świadczenie usług, licencja, umowa partnerska, umowa dostawy, umowa o dzieło, umowa zlecenia, itp. Typ umowy wpływa na to, które klauzule są najbardziej istotne oraz jakie przepisy KC mają zastosowanie (umowy nazwane vs. nienazwane — art. 353¹ KC).
 2. **Określ stronę użytkownika**: Dostawca, zamawiający, licencjodawca, licencjobiorca, partner. To fundamentalnie zmienia analizę (np. ograniczenie odpowiedzialności chroni różne strony).
 3. **Przeczytaj całą umowę** przed zgłaszaniem problemów. Klauzule oddziałują na siebie (np. brak limitu odpowiedzialności może być częściowo kompensowany przez szerokie kary umowne).
 4. **Przeanalizuj każdą istotną klauzulę** w odniesieniu do pozycji z playbooka oraz bezwzględnie obowiązujących przepisów polskiego prawa.
-5. **Oceń umowę holistycznie**: Czy ogólna alokacja ryzyka i warunki handlowe są zrównoważone? Czy umowa nie zawiera postanowień sprzecznych z naturą stosunku zobowiązaniowego (art. 353¹ KC)?
+5. **Rozłóż klauzule złożone na składowe**: Szeroka klauzula wyłączenia
+   odpowiedzialności często „upakowuje" kilka odrębnych ryzyk w jednym zdaniu.
+   Zidentyfikuj i oceń KAŻDĄ składową osobno. Przykład: „Wykonawca nie ponosi
+   odpowiedzialności za działania podwykonawców ani za roszczenia klientów
+   końcowych Zamawiającego" to DWA odrębne ryzyka: (a) wyłączenie
+   odpowiedzialności za podwykonawców na gruncie cywilnym (art. 474 KC —
+   przepis dyspozytywny, ale wyłączenie osłabia pozycję zamawiającego) oraz
+   (b) wyłączenie odpowiedzialności za roszczenia osób trzecich. Każde oznacz
+   i sklasyfikuj oddzielnie — ryzyko schowane w środku zdania jest tak samo
+   realne jak ryzyko z własnym nagłówkiem.
+6. **Oceń umowę holistycznie**: Czy ogólna alokacja ryzyka i warunki handlowe są zrównoważone? Czy umowa nie zawiera postanowień sprzecznych z naturą stosunku zobowiązaniowego (art. 353¹ KC)?
+
+### Kalibracja oceny — nie każda umowa wymaga poprawek
+
+Liczba i waga uwag MUSI odzwierciedlać rzeczywistą jakość dokumentu. Jeśli
+umowa jest poprawnie skonstruowana, powiedz to wprost na początku: „Ta umowa
+jest w zasadzie poprawna — poniżej kilka drobnych uwag." NIE generuj propozycji
+zmian na siłę, żeby analiza wyglądała na dokładniejszą:
+
+- Nie zgłaszaj jako ryzyka postanowień standardowych i rynkowo neutralnych.
+- Nie proponuj zmian kosmetycznych obok istotnych — rozmywa to priorytety.
+- Przy poprawnej umowie ogranicz się do ZIELONY z krótkim potwierdzeniem
+  zgodności i ewentualnie 1-3 uwag opcjonalnych.
+- Fałszywe alarmy podważają zaufanie do całej analizy tak samo jak przeoczenia.
 
 ## Analiza kluczowych klauzul
 
@@ -146,6 +184,36 @@ Jeśli playbook nie jest dostępny:
 - Nieadekwatne postanowienia dotyczące pomocy przejściowej
 - Klauzule przeżywające efektywnie przedłużające umowę bezterminowo
 
+### Ryzyka projektowe i operacyjne (wdrożenia IT)
+
+Wdrożenia IT najczęściej zawodzą nie na klauzulach prawnych, lecz na braku
+mechanizmów operacyjnych. Przy umowach wdrożeniowych, SaaS i serwisowych
+sprawdzaj ZAWSZE:
+
+**Kluczowe elementy do przeglądu:**
+- **SLA**: Czy zdefiniowano poziomy dostępności, czasy reakcji i naprawy?
+  Czy są mierzalne i czy naruszenie SLA ma sankcję (kary umowne, kredyty,
+  prawo wypowiedzenia)?
+- **Etapy i harmonogram wdrożenia**: Czy zdefiniowano kamienie milowe z datami
+  i produktami (deliverables)? Co się dzieje przy opóźnieniu każdej ze stron?
+- **Kryteria i procedura odbioru**: Czy odbiór ma obiektywne, mierzalne
+  kryteria? Kto i w jakim terminie zgłasza uwagi? Ile iteracji poprawek?
+- **Milczący odbiór**: Klauzule typu „brak uwag w X dni oznacza odbiór" —
+  oceń długość terminu i czy bieg terminu wymaga kompletnego zgłoszenia.
+- **Zależności i współdziałanie**: Jakie obowiązki współdziałania ma
+  zamawiający (art. 640 KC dla dzieła) i czy ich zakres jest realistyczny?
+- **Plan wyjścia (exit plan)**: Migracja danych, format eksportu, okres
+  przejściowy, pomoc przy przejściu do innego dostawcy, koszty tych czynności.
+- **Zmiany zakresu (change management)**: Procedura zmian, wycena, wpływ na
+  harmonogram.
+
+**Typowe problemy:**
+- Umowa wdrożeniowa bez SLA albo z SLA bez sankcji („best effort")
+- Brak kryteriów odbioru → spór o to, czy dzieło jest wykonane
+- Milczący odbiór z krótkim terminem przy złożonym przedmiocie odbioru
+- Harmonogram bez konsekwencji opóźnień po stronie wykonawcy
+- Brak planu wyjścia → vendor lock-in
+
 ### Prawo właściwe i rozwiązywanie sporów
 
 **Kontekst prawny**: W umowach krajowych (obie strony polskie) domyślnie stosuje się prawo polskie. W umowach międzynarodowych wybór prawa właściwego reguluje Rozporządzenie Rzym I (Rozporządzenie (WE) nr 593/2008). W Polsce nie istnieje instytucja jury trial ani class action w rozumieniu prawa anglosaskiego.
@@ -212,10 +280,24 @@ Klauzula wykracza poza dopuszczalny zakres, uruchamia zdefiniowane kryterium esk
 
 ## Najlepsze praktyki tworzenia propozycji zmian
 
+**Zasada nadrzędna — jakość ponad ilość uzasadnień**: Każdy powołany przepis
+lub orzeczenie musi RZECZYWIŚCIE wspierać tezę, pod którą stoi. Lepiej jedno
+pewne uzasadnienie niż trzy wątpliwe:
+
+- NIE cytuj przepisu, jeśli związek z tezą wymaga wnioskowania, którego nie
+  przeprowadzasz w tekście.
+- Przy przepisach względnie obowiązujących (dyspozytywnych, np. art. 474 KC)
+  ZAWSZE zaznacz, że strony mogą umówić się inaczej — nie sugeruj, że klauzula
+  jest „niezgodna z prawem", gdy jest jedynie niekorzystna.
+- NIE cytuj przepisów sektorowych (finanse, bankowość, farmacja) poza ich
+  sektorem.
+- Jeśli nie masz pewnego uzasadnienia prawnego, oprzyj rekomendację wprost na
+  ryzyku biznesowym — to uczciwsze niż przypadkowy przepis.
+
 Podczas generowania propozycji zmian:
 
 1. **Bądź precyzyjny**: Przedstaw dokładne brzmienie proponowanej klauzuli, gotowe do wstawienia. Nie ograniczaj się do ogólnych wskazówek.
-2. **Bądź wyważony**: Proponuj brzmienie stanowcze w kluczowych punktach, ale rynkowo rozsądne. Zbyt agresywne propozycje zmian spowalniają negocjacje.
+2. **Bądź wyważony**: Proponuj brzmienie stanowcze w kluczowych punktach, ale rynkowo rozsądne. Zbyt agresywne propozycje zmian spowalniają negocjacje — nie przeciągaj klauzul w drugą stronę ponad standard rynkowy (np. nie żądaj gwarancji braku halucynacji od dostawcy AI; żądaj środków minimalizujących ryzyko).
 3. **Wyjaśnij uzasadnienie**: Dołącz krótkie, profesjonalne uzasadnienie odpowiednie do udostępnienia pełnomocnikowi drugiej strony. Gdy to możliwe, powołaj się na konkretne przepisy prawa (np. „Proponowana zmiana zapewnia zgodność z art. 483 § 1 KC").
 4. **Przedstaw pozycje awaryjne**: Dla elementów ŻÓŁTY dołącz pozycję awaryjną na wypadek odrzucenia pierwotnej propozycji.
 5. **Ustal priorytety**: Nie wszystkie propozycje zmian mają równą wagę. Wskaż, które są bezwzględne, a które pożądane.
