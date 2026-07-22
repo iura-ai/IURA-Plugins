@@ -1,0 +1,8 @@
+{
+  "name": "iura-repo",
+  "version": "1.0.0",
+  "description": "IURA Repository plugin — secure access to your firm's private document repository. Browse folders, search encrypted documents, read chunks with provenance, and manage annotations, priorities, and open questions — via IURA MCP.",
+  "author": {
+    "name": "IURA"
+  }
+}

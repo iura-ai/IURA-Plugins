@@ -18,6 +18,11 @@
       "name": "iura-eu",
       "source": "./iura-eu",
       "description": "IURA plugin for EU law practitioners. Drafts objective legal memos grounded in EU treaties, regulations, directives, and CJEU / ECtHR case-law — with IURA MCP integration for European legal sources."
+    },
+    {
+      "name": "iura-repo",
+      "source": "./iura-repo",
+      "description": "IURA Repository plugin — secure access to your firm's private document repository. Browse folders, search encrypted documents, read chunks with provenance, and manage annotations, priorities, and open questions — via IURA MCP."
     }
   ]
 }

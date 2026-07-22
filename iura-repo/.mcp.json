@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "IURA Repo": {
+      "type": "http",
+      "url": "https://mcp.iura.io/repo/mcp"
+    }
+  }
+}
