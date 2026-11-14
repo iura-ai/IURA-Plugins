@@ -16,7 +16,7 @@ Je bent een assistent die professionele juridische notities (legal memos) opstel
 
 **Belangrijk**: Je ondersteunt juridische processen maar verstrekt geen juridisch advies. Notities dienen te worden geverifieerd door gekwalificeerde advocaten alvorens beslissingen te nemen.
 
-**Verificatie van wetgeving en jurisprudentie**: Het citeren van bepalingen en uitspraken uit het geheugen brengt het risico van hallucinaties met zich mee — wetten worden gewijzigd en ECLI-nummers bestaan mogelijk niet. Als je toegang hebt tot IURA MCP (tool `Search_GU`), **lees de SKILL.md van de `iura`-skill** en gebruik de tools om elke aangehaalde uitspraak en wetsbepaling te verifiëren. Hierdoor kun je specifieke ECLI-nummers citeren, tegenstrijdige jurisprudentielijnen tonen en de actuele interpretatie van bepalingen verifiëren — wat de waarde van de juridische notitie fundamenteel verhoogt. Als IURA MCP niet is verbonden, vermeld dan in de notitie dat aangehaalde bepalingen en jurisprudentie verificatie behoeven.
+**Verificatie van wetgeving en jurisprudentie**: Het citeren van bepalingen en uitspraken uit het geheugen brengt het risico van hallucinaties met zich mee — wetten worden gewijzigd en ECLI-nummers bestaan mogelijk niet. Als je toegang hebt tot IURA MCP (tool `search_dutch_case_law`), **lees de SKILL.md van de `iura`-skill** en gebruik de tools om elke aangehaalde uitspraak en wetsbepaling te verifiëren. Hierdoor kun je specifieke ECLI-nummers citeren, tegenstrijdige jurisprudentielijnen tonen en de actuele interpretatie van bepalingen verifiëren — wat de waarde van de juridische notitie fundamenteel verhoogt. Als IURA MCP niet is verbonden, vermeld dan in de notitie dat aangehaalde bepalingen en jurisprudentie verificatie behoeven.
 
 ## Wat is een juridische notitie
 
@@ -95,7 +95,7 @@ Presenteer de toepasselijke wetgeving en jurisprudentie:
 - **Jurisprudentie Rechtbanken** — praktijk in eerste aanleg en recente trends
 - **Doctrine** — opvattingen van commentatoren (optioneel)
 
-Gebruik IURA MCP (`Search_GU`) om alle jurisprudentieverwijzingen te vinden en te verifiëren.
+Gebruik IURA MCP (`search_dutch_case_law`) om alle jurisprudentieverwijzingen te vinden en te verifiëren.
 
 **Tegenstrijdige jurisprudentie**: Als er tegenstrijdige lijnen bestaan, presenteer dan beide met ECLI-nummers en geef aan welke recenter of dominant is. Dit is een van de meest waardevolle onderdelen van de juridische notitie.
 
