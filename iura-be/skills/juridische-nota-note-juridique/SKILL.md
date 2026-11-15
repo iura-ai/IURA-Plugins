@@ -18,7 +18,7 @@ Uitdrukkelijke instructies van de gebruiker (structuur, lengte, publiek, taal) g
 ## Verificatie — niets uit het geheugen
 
 - Volg de verificatieregels en de toolinstructies van de `iura`-skill (lees die SKILL.md als ze nog niet is geladen).
-- Elke bepaling, elk rolnummer, ECLI, GwH- of RvS-nummer en elke B.S./M.B.-verwijzing komt uit toolresultaten van dit gesprek of uit een document van de gebruiker. Kun je een artikelnummer niet bevestigen, noem het dan niet en zoek het op met `search_belgian_legislation`.
+- Elke bepaling, elk rolnummer, ECLI, GwH- of RvS-nummer en elke B.S./M.B.-verwijzing komt uit toolresultaten van dit gesprek of uit een document van de gebruiker. Kun je een artikelnummer niet bevestigen, noem het dan niet en zoek het op met `search_belgian_legislation`. Let op (getest 2026-11-15): `search_belgian_legislation` geeft Boek 5/6 BW en de B2B-regels van het WER terug als de invoerings- of wijzigingswet in de oorspronkelijke bewoording, zonder latere wijzigingen. Controleer de geconsolideerde tekst op ejustice.just.fgov.be (via `search_web`) voordat je een artikel citeert, beschrijf de regel in je zoekopdracht in plaats van alleen het artikelnummer, en zie de skill `iura`, deel "Dekking".
 - Heeft een stelling geen bron in de resultaten, schrijf dat in de nota ("niet geverifieerd").
 - Zijn de tools niet beschikbaar, vermeld dat bovenaan de nota en markeer elke verwijzing als te verifiëren.
 
@@ -38,7 +38,7 @@ Zijn de feiten dun, werk dan met benoemde aannames.
 1. Formuleer de rechtsvraag en splits ze in deelvragen.
 2. Onderzoek per deelvraag vóór het schrijven:
    - wettekst: `search_belgian_legislation` met `in_force_as_of` = datum van de feiten (standaard vandaag); noteer de geldigheidsperiode;
-   - rechtspraak: `search_belgian_case_law` (Cassatie, hoven, arbeidsgerechten), `search_belgian_constitutional_court_rulings`, `search_belgian_council_of_state_rulings`;
+   - rechtspraak: `search_belgian_case_law` (Cassatie, hoven, arbeidsgerechten; met `date_from` voor recente rechtspraak), `search_belgian_constitutional_court_rulings`, `search_belgian_council_of_state_rulings`;
    - bekend nummer: `find_ruling_by_case_number` (ECLI voor JUPORTAL; GwH "nr/jaar"; RvS-nummer zonder punt);
    - kernpassages: `read_legal_document` — de AI-samenvatting is geen bron;
    - EU-laag: `search_eu_legislation` (Engels, `in_force_as_of`), `search_eu_court_of_justice_case_law`, `search_european_court_of_human_rights_case_law`;

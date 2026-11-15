@@ -34,7 +34,7 @@ België is tweetalig. Deze skill geldt voor beide talen.
 | Grondwettelijk Hof (Cour constitutionnelle) | `search_belgian_constitutional_court_rulings` (arrestnummer zoals "138/2020") |
 | Raad van State (Conseil d'État) | `search_belgian_council_of_state_rulings` (arrestnummer) |
 | Bekend nummer of ECLI controleren | `find_ruling_by_case_number` (`signature`) |
-| Volledige tekst | `read_legal_document` (`document_id`; modus `query` of `start_chunk`/`end_chunk`; `include_summary`) |
+| Volledige tekst van een uitspraak | `read_legal_document` (`document_id`; modus `query` of `start_chunk`/`end_chunk`; `include_summary`) — niet voor wetgeving |
 | EU-wetgeving en -rechtspraak, EVRM | `search_eu_legislation` (Engels, `in_force_as_of` verplicht, `doc_type` bijv. 'REG'/'DIR'), `search_eu_court_of_justice_case_law`, `search_european_court_of_human_rights_case_law` (Engels) |
 | Wetsontwerpen, nieuws, standpunten van toezichthouders | `search_web` (`query`, `num_results` 1–5) |
 | Bronnenpaneel na het antwoord | `show_sources_panel` (`cited_document_ids`, in volgorde van citeren) |
@@ -43,7 +43,7 @@ België is tweetalig. Deze skill geldt voor beide talen.
 
 - **JUPORTAL / Cassatie**: zoek op het **volledige ECLI**, niet op het rolnummer. "ECLI:BE:CASS:2023:ARR.20231123.1N.1" wordt gevonden; het rolnummer "C.23.0023.N" alleen geeft `found=false`. Heeft de gebruiker alleen een rolnummer, zoek dan met `search_belgian_case_law` op onderwerp en datum.
 - **Grondwettelijk Hof**: "138/2020" wordt gevonden.
-- **Raad van State**: arrestnummer **zonder punt**: "250000" wordt gevonden, "250.000" niet. Probeer beide schrijfwijzen.
+- **Raad van State**: arrestnummer **zonder punt**: "250000" wordt gevonden, "250.000" niet. Probeer beide schrijfwijzen. Ook de zoektool geeft de nummers zonder punt terug (bijv. "122597"); citeer ze in de gebruikelijke vorm ("RvS nr. 122.597" / "C.E., n° 122.597").
 - `found=false` betekent: niet in de doorzochte collecties. Ken de uitspraak dan geen inhoud toe.
 
 ### Waarschuwingen bij JUPORTAL-resultaten
@@ -51,6 +51,19 @@ België is tweetalig. Deze skill geldt voor beide talen.
 - Sommige JUPORTAL-documenten bevatten alleen het rolnummer, zonder tekst. De AI-samenvatting van zo'n document kan dan volledig verzonnen zijn (in een test beschreef de samenvatting van een Cassatiearrest een grondwettigheidstoetsing die niet in het document staat). Lees altijd met `read_legal_document`; staat de overweging niet in de tekst, citeer de uitspraak dan niet voor die stelling.
 - De datum in de metadata (`promulgation_date`) kan afwijken van de uitspraakdatum. Gebruik de datum uit het ECLI en uit de tekst van het arrest.
 - Arresten van het Hof van Cassatie verschijnen soms in vertaling (bijv. Franse vertaling van een Nederlandstalig arrest); vermeld de taal van de geraadpleegde versie als dat relevant is.
+- **Gebruik `date_from` (bijv. "2015-01-01") voor actueel recht.** Zonder datumfilter gaf een test vooral arresten uit 1967–1989, waarvan de samenvattingen niet-bestaande artikelen noemden of begonnen met "Based on the ECLI identifier…" (dus zonder echte tekst gemaakt). Met `date_from` kwamen recente arresten van hoven van beroep en Cassatie (2020–2025) met bruikbare samenvattingen.
+- De samenvattingen zijn in het Engels en automatisch gegenereerd. Citeer altijd uit de tekst van het arrest zelf, in de proceduretaal.
+- Rechtspraak over contracten van vóór 2023 past nog het **oud BW** toe (bijv. art. 1231 oud BW over het strafbeding); controleer of de redenering ook onder Boek 5 opgaat voordat je ze op een nieuw contract toepast.
+
+### Dekking en gedrag van `search_belgian_legislation` (getest 2026-11-15)
+
+- Het **Gerechtelijk Wetboek** komt terug als geconsolideerde tekst met de wijzigingsgeschiedenis per artikel (bijv. art. 590, 700–710, 780). De tekst is vaak in het Frans, ook als de titel Nederlands is.
+- Het **nieuw Burgerlijk Wetboek** (Boek 5, Boek 6) en de **B2B-regels van het WER** (art. VI.91/1 e.v.) komen terug als de **invoerings- of wijzigingswet** (wet van 28 april 2022, wet van 7 februari 2024, wet van 4 april 2019), in de oorspronkelijke bewoording. Latere wijzigingen zie je dan niet: zo werd art. 5.89, § 2 BW opgeheven door de wet van 7 februari 2024, wat niet blijkt uit de tekst van Boek 5 zelf. Controleer de geconsolideerde versie op ejustice.just.fgov.be (via `search_web` of een document van de gebruiker) voordat je een artikel van het nieuw BW of het WER citeert, en vermeld de bron.
+- Een zoekopdracht die alleen uit een artikelnummer bestaat ("article 5.74 Code civil") gaf een niet-relevante wet. Beschrijf de regel ("changement de circonstances imprévisible, renégociation"), voeg in `context` het wetboek toe ("nieuw Burgerlijk Wetboek Boek 5, wet van 28 april 2022") en herhaal in de andere landstaal.
+- Krijg je voor een vraag over het nieuw BW alleen wijzigingsbepalingen van andere wetten terug ("dans l'article … le mot … est remplacé"), zeg dan dat de artikeltekst niet via de tool kon worden gecontroleerd.
+- Het resultaat toont niet altijd een expliciete geldigheidsperiode; leid de versie af uit de wijzigingsnoten ("En vigueur : …") of uit de datum van de wet.
+- **`read_legal_document` werkt voor uitspraken, niet voor wetgeving**: een `document_id` uit `search_belgian_legislation` geeft "Document not found". Voor wetteksten geldt de tekst van het zoekresultaat; zoek opnieuw met een andere formulering of raadpleeg ejustice.just.fgov.be.
+- De parameter `doc_type` geldt voor EU-akten en hoort hier niet gebruikt te worden.
 
 ## Peildatum (`in_force_as_of`) en overgangsrecht
 
@@ -65,7 +78,7 @@ België is tweetalig. Deze skill geldt voor beide talen.
 ## Zoekstrategie
 
 - **Rechtspraak** werkt semantisch: beschrijf het probleem ("eenzijdige ontbinding op risico van de schuldeiser", "résolution unilatérale aux risques et périls du créancier"), niet alleen een artikelnummer.
-- **Wetgeving**: je mag het wetboek en artikel noemen ("art. 5.74 Code civil changement de circonstances") of het onderwerp beschrijven. Noem het wetboek bij naam; "BW" alleen is dubbelzinnig met het Nederlandse BW.
+- **Wetgeving**: beschrijf de regel in natuurlijke taal en zet het wetboek in `context`; een zoekopdracht met alleen een artikelnummer is onbetrouwbaar (zie hierboven). Noem het wetboek bij naam; "BW" alleen is dubbelzinnig met het Nederlandse BW.
 - Gebruik `context` voor de situatie van de gebruiker; `top_k` 3–5 voor een gerichte vraag, ±10 voor een overzicht; `date_from`/`date_to` om te zien of een rechtspraaklijn vóór of na de hervorming van 2023 ligt.
 - Doe per rechtsvraag 2–3 zoekopdrachten: kernprobleem, herformulering, bredere leer — en minstens één in de andere landstaal.
 - `search_web` alleen voor actualiteit (wetsontwerpen, Kamerstukken, FOD Justitie, GBA/APD); geen bron voor wettekst.

@@ -18,8 +18,8 @@ Uitdrukkelijke instructies van de gebruiker gaan vóór de standaardinstellingen
 ## Verificatie — niets uit het geheugen
 
 - Volg de verificatieregels en toolinstructies van de `iura`-skill.
-- De artikelnummers hieronder zijn op Justel gecontroleerd (stand november 2026); controleer ze met `search_belgian_legislation` vóór je ze in een toelichting zet. Noem geen andere nummers dan die je in toolresultaten zag.
-- Rechtspraak over NDA's of bedrijfsgeheimen alleen uit `search_belgian_case_law`, gelezen met `read_legal_document`.
+- De artikelnummers hieronder zijn op Justel gecontroleerd (stand november 2026); controleer ze met `search_belgian_legislation` vóór je ze in een toelichting zet. Noem geen andere nummers dan die je in toolresultaten zag. Let op (getest 2026-11-15): `search_belgian_legislation` geeft Boek 5/6 BW en de B2B-regels van het WER terug als de invoerings- of wijzigingswet in de oorspronkelijke bewoording, zonder latere wijzigingen. Controleer de geconsolideerde tekst op ejustice.just.fgov.be (via `search_web`) voordat je een artikel citeert, beschrijf de regel in je zoekopdracht in plaats van alleen het artikelnummer, en zie de skill `iura`, deel "Dekking".
+- Rechtspraak over NDA's of bedrijfsgeheimen alleen uit `search_belgian_case_law`, gelezen met `read_legal_document`. Gebruik `date_from` (bijv. 2015-01-01) om recente rechtspraak te krijgen; zonder filter domineren oude arresten met onbetrouwbare samenvattingen (zie de skill `iura`).
 
 ## Juridisch kader
 

@@ -20,6 +20,8 @@ Resultatet är ett **utkast för granskning av en behörig jurist, inte juridisk
 
 > **Krav:** Skillen förutsätter de svenska IURA-verktygen (`search_swedish_legislation`, `search_swedish_supreme_court_rulings` m.fl.). Är de inte tillgängliga: säg det, skriv utkastet utan hänvisningar till lagrum och avgöranden som inte kommer från användaren, och markera alla rättsliga påståenden som **ej verifierade**.
 
+> **Obs (testat 2026-11-15):** rättegångsbalken (1942:740) och avtalslagen (1915:218) finns för närvarande inte i sökindexet för `search_swedish_legislation`. Hämta lydelsen i RB och AvtL från riksdagen.se via `search_web`, ange källan och skriv att den inte kontrollerats i IURA:s lagdatabas. Sök på regelns innehåll, inte på paragrafnummer (se skillen `iura`, avsnittet om täckning).
+
 ---
 
 ## Grundregel: inga källor ur minnet
@@ -53,7 +55,7 @@ För forskningsmetodik i övrigt, se skillen `iura`.
 
 Sökteknik:
 - Sök på svenska. Beskriv problemet i naturligt språk ("ansvarsbegränsning i avtal jämkning 36 § avtalslagen") och gör minst 2–3 omformulerade sökningar per rättsfråga.
-- `search_swedish_legislation` känner igen förkortningar (RB, AvtL, KöpL, KköpL, SkL, JB) och SFS-nummer. Kontrollera alltid att den returnerade versionens giltighetsperiod omfattar `in_force_as_of` och ange perioden.
+- `search_swedish_legislation`: beskriv regelns innehåll i naturligt språk; en fråga som bara består av ett paragrafnummer träffar fel lag. Kontrollera alltid att den returnerade versionens giltighetsperiod omfattar `in_force_as_of` och ange perioden.
 - `in_force_as_of`: för materiella regler dagen för den relevanta händelsen (avtalsslut, skadetillfälle); för processuella regler dagen då ansökan ska ges in (standard: i dag).
 - `context`: beskriv parternas situation. `top_k`: 3–5 för en specifik fråga, ca 10 för överblick. `date_from`/`date_to` för att följa en praxislinje över tid.
 
