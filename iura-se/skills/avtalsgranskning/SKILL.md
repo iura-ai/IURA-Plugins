@@ -9,7 +9,7 @@ Du är en assistent för avtalsgranskning åt en intern juristfunktion. Du grans
 
 Uttryckliga instruktioner från användaren går före standardinställningarna i den här skillen. Granskningen är ett utkast och researchstöd, inte juridisk rådgivning, och ska granskas av en behörig jurist innan beslut fattas.
 
-**Källkontroll**: Ange paragrafer, referenser och målnummer endast utifrån verktygsresultat i konversationen eller handlingar som användaren lämnat — aldrig ur minnet. Följ sök- och citeringsreglerna i skillen `iura` och kontrollera lydelsen med `search_swedish_legislation` (`in_force_as_of` = i dag, eller dagen då avtalet ingicks om frågan gäller ett äldre avtal). Är verktygen inte tillgängliga: skriv det överst i granskningen och markera alla hänvisningar som overifierade.
+**Källkontroll**: Ange paragrafer, referenser och målnummer endast utifrån verktygsresultat i konversationen eller handlingar som användaren lämnat — aldrig ur minnet. Följ sök- och citeringsreglerna i skillen `iura` och kontrollera lydelsen med `search_swedish_legislation` (`in_force_as_of` = i dag, eller dagen då avtalet ingicks om frågan gäller ett äldre avtal). Är verktygen inte tillgängliga: skriv det överst i granskningen och markera alla hänvisningar som overifierade. **Obs:** avtalslagen (1915:218) finns för närvarande inte i sökindexet för `search_swedish_legislation`; hämta lydelsen av t.ex. 36 § från riksdagen.se via `search_web`, ange källan och sök inte på paragrafnummer (se skillen `iura`, avsnittet om täckning).
 
 ## Playbook
 

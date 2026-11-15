@@ -21,6 +21,8 @@ Resultatet är ett **utkast för granskning av en behörig jurist, inte juridisk
 
 > **Krav:** Skillen förutsätter de svenska IURA-verktygen (`search_swedish_legislation`, `search_swedish_supreme_court_rulings` m.fl.). Är de inte tillgängliga: säg det, skriv utkastet utan hänvisningar till lagrum och avgöranden som inte kommer från användaren, och markera alla rättsliga påståenden som **ej verifierade**.
 
+> **Obs (testat 2026-11-15):** rättegångsbalken (1942:740) och avtalslagen (1915:218) finns för närvarande inte i sökindexet för `search_swedish_legislation`. Hämta lydelsen i RB och AvtL från riksdagen.se via `search_web`, ange källan och skriv att den inte kontrollerats i IURA:s lagdatabas. Sök på regelns innehåll, inte på paragrafnummer (se skillen `iura`, avsnittet om täckning).
+
 ---
 
 ## Grundregel: inga källor ur minnet
@@ -60,7 +62,7 @@ För forskningsmetodik i övrigt, se skillen `iura`.
 | Hovrättspraxis | `search_swedish_court_of_appeal_rulings` |
 | Arbetsrätt / immaterialrätt och marknadsföring / fastighet och miljö | `search_swedish_labour_court_rulings` (AD), `search_swedish_patent_and_market_court_of_appeal_rulings` (PMÖD), `search_swedish_land_and_environment_court_of_appeal_rulings` (MÖD) |
 | Kontroll av referenser i stämningsansökan och i eget utkast | `find_ruling_by_case_number` |
-| Läsa domskäl eller lagtext i fulltext | `read_legal_document` |
+| Läsa domskäl i fulltext | `read_legal_document` (fungerar för avgöranden, inte för lagtext) |
 | EU-rätt och Europakonventionen | `search_eu_legislation`, `search_eu_court_of_justice_case_law`, `search_european_court_of_human_rights_case_law` (sökning på engelska) |
 | Aktuella belopp och domstolens vägledning | `search_web` |
 | Visa källor efter svaret | `show_sources_panel` |

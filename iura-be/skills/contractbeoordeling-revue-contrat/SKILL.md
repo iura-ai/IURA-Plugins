@@ -18,8 +18,8 @@ Uitdrukkelijke instructies van de gebruiker gaan vóór de standaardinstellingen
 ## Verificatie — niets uit het geheugen
 
 - Volg de verificatieregels en toolinstructies van de `iura`-skill (lees die SKILL.md als ze nog niet is geladen).
-- De artikelnummers in deze skill zijn op Justel gecontroleerd (stand november 2026). Controleer ze toch met `search_belgian_legislation` vóór je ze in een redline-toelichting zet, en noem geen andere artikelnummers dan die je in toolresultaten hebt gezien. Kun je een nummer niet bevestigen, verwijs dan naar de regel zonder nummer.
-- Rechtspraak alleen uit `search_belgian_case_law` / `find_ruling_by_case_number`, gelezen met `read_legal_document`.
+- De artikelnummers in deze skill zijn op Justel gecontroleerd (stand november 2026). Controleer ze toch met `search_belgian_legislation` vóór je ze in een redline-toelichting zet, en noem geen andere artikelnummers dan die je in toolresultaten hebt gezien. Kun je een nummer niet bevestigen, verwijs dan naar de regel zonder nummer. Let op (getest 2026-11-15): `search_belgian_legislation` geeft Boek 5/6 BW en de B2B-regels van het WER terug als de invoerings- of wijzigingswet in de oorspronkelijke bewoording, zonder latere wijzigingen. Controleer de geconsolideerde tekst op ejustice.just.fgov.be (via `search_web`) voordat je een artikel citeert, beschrijf de regel in je zoekopdracht in plaats van alleen het artikelnummer, en zie de skill `iura`, deel "Dekking".
+- Rechtspraak alleen uit `search_belgian_case_law` / `find_ruling_by_case_number`, gelezen met `read_legal_document`. Gebruik `date_from` (bijv. 2015-01-01) om recente rechtspraak te krijgen; zonder filter domineren oude arresten met onbetrouwbare samenvattingen (zie de skill `iura`).
 - Tools niet beschikbaar: zeg dat bovenaan en markeer alle verwijzingen als te verifiëren.
 
 ## Stap 0 — Welk recht geldt voor dit contract? (droit applicable dans le temps)
