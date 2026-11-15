@@ -35,7 +35,7 @@ Zanim zaczniesz pisać, ustal z użytkownikiem następujące dane. Nie generuj a
 
 OBOWIĄZKOWE: przed napisaniem apelacji ZAWSZE użyj narzędzi wyszukiwania prawnego, aby pozyskać aktualne i relewantne:
 
-### Przepisy (Search_DU)
+### Przepisy (search_polish_legislation)
 Wyszukaj aktualne brzmienie kluczowych przepisów k.p.k. i k.k./k.k.s. relewantnych dla sprawy:
 - Przepisy o apelacji: art. 425, 427, 428, 437, 438, 439, 444-449a k.p.k.
 - Zasady procesowe naruszane w zarzutach: art. 4, 5, 6, 7, 410, 424 k.p.k.
@@ -43,7 +43,7 @@ Wyszukaj aktualne brzmienie kluczowych przepisów k.p.k. i k.k./k.k.s. relewantn
 - Przepisy prawa materialnego dotyczące kwalifikacji czynu
 - Przepisy o wymiarze kary: art. 53 k.k. i dalsze
 
-### Orzecznictwo Sądu Najwyższego (Search_SN)
+### Orzecznictwo Sądu Najwyższego (search_polish_supreme_court_rulings)
 Wyszukaj orzecznictwo SN dotyczące:
 - Standardów kontroli odwoławczej
 - Wykładni naruszonego przepisu
@@ -51,16 +51,16 @@ Wyszukaj orzecznictwo SN dotyczące:
 - Bezwzględnych przyczyn odwoławczych (jeśli dotyczy)
 - Specyfiki danego typu przestępstwa
 
-### Orzecznictwo sądów powszechnych (Search_SP)
+### Orzecznictwo sądów powszechnych (search_polish_common_court_rulings)
 Wyszukaj orzeczenia sądów apelacyjnych i okręgowych dotyczące:
 - Analogicznych stanów faktycznych
 - Skuteczności podobnych zarzutów
 - Wymiaru kary w podobnych sprawach
 
 ### Inne narzędzia (opcjonalnie)
-- Search_TK — jeśli sprawa dotyczy konstytucyjności przepisu
-- Search_KIO, Search_IP — jeśli sprawa ma aspekty szczególne
-- Search_CBOSA — jeśli sprawa dotyczy zagadnień administracyjnych powiązanych z karnym (np. decyzje podatkowe w sprawach kks)
+- search_polish_constitutional_tribunal_rulings — jeśli sprawa dotyczy konstytucyjności przepisu
+- search_polish_public_procurement_appeal_rulings, search_polish_tax_interpretations — jeśli sprawa ma aspekty szczególne
+- search_polish_supreme_administrative_court_rulings, search_polish_regional_administrative_court_rulings — jeśli sprawa dotyczy zagadnień administracyjnych powiązanych z karnym (np. decyzje podatkowe w sprawach kks)
 
 ---
 
@@ -574,10 +574,10 @@ Po wygenerowaniu apelacji zweryfikuj:
 
 ### Wymiar kary
 - **SN, V KK 359/17 z 09.11.2017** — granice tożsamości czynu a kwalifikacja prawna
-- Orzecznictwo sądów powszechnych w danej kategorii spraw — wyszukuj dynamicznie przez Search_SP
+- Orzecznictwo sądów powszechnych w danej kategorii spraw — wyszukuj dynamicznie przez search_polish_common_court_rulings
 
 ---
 
 ## Uwaga końcowa
 
-Powyższe mechanizmy argumentacyjne, wzorce formułowań i orzecznictwo stanowią zestaw narzędzi referencyjnych. W konkretnej apelacji dobieraj je odpowiednio do stanu faktycznego i zarzutów. ZAWSZE wyszukuj aktualne orzecznictwo przez narzędzia MCP (Search_SN, Search_SP, Search_DU) — powyższe sygnatury stanowią punkt wyjścia, ale orzecznictwo ewoluuje i w konkretnej sprawie mogą być bardziej relewantne inne orzeczenia.
+Powyższe mechanizmy argumentacyjne, wzorce formułowań i orzecznictwo stanowią zestaw narzędzi referencyjnych. W konkretnej apelacji dobieraj je odpowiednio do stanu faktycznego i zarzutów. ZAWSZE wyszukuj aktualne orzecznictwo przez narzędzia MCP (search_polish_supreme_court_rulings, search_polish_common_court_rulings, search_polish_legislation) — powyższe sygnatury stanowią punkt wyjścia, ale orzecznictwo ewoluuje i w konkretnej sprawie mogą być bardziej relewantne inne orzeczenia.

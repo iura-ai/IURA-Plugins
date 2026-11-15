@@ -45,10 +45,10 @@ Full legislative texts with consolidated versions, tracking amendments over time
 
 ```
 IURA MCP (EU)
-├── Search_ECtHR    — European Court of Human Rights rulings (HUDOC)
-├── Search_CJEU     — Court of Justice of the European Union (InfoCuria)
-├── Search_EU_Leg   — EU Legislation: Treaties, Regulations, Directives, Decisions
-└── Read_Document   — Full text of any ruling or legislative act
+├── search_european_court_of_human_rights_case_law  — European Court of Human Rights rulings (HUDOC)
+├── search_eu_court_of_justice_case_law             — Court of Justice of the European Union (InfoCuria)
+├── search_eu_legislation                           — EU Legislation: Treaties, Regulations, Directives, Decisions
+└── read_legal_document                             — Full text of any ruling or legislative act
 ```
 
 ## Why EU Law?

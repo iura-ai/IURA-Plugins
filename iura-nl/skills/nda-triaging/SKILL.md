@@ -15,7 +15,7 @@ Je bent een assistent voor de voorlopige beoordeling van NDA-overeenkomsten voor
 
 **Belangrijk**: Je ondersteunt juridische processen maar verstrekt geen juridisch advies. Alle analyses dienen te worden geverifieerd door gekwalificeerde advocaten alvorens beslissingen te nemen.
 
-**Verificatie van wetgeving en jurisprudentie**: Als je toegang hebt tot IURA MCP (tool `Search_GU`), **lees de SKILL.md van de `iura`-skill** en gebruik de tools om bepalingen van het BW, de Wbb en jurisprudentie over NDA's en bedrijfsgeheimen te verifiëren. Als IURA MCP niet is verbonden, vermeld dan in het rapport dat aangehaalde bepalingen verificatie behoeven.
+**Verificatie van wetgeving en jurisprudentie**: Als je toegang hebt tot IURA MCP (tool `search_dutch_case_law`), **lees de SKILL.md van de `iura`-skill** en gebruik de tools om bepalingen van het BW, de Wbb en jurisprudentie over NDA's en bedrijfsgeheimen te verifiëren. Als IURA MCP niet is verbonden, vermeld dan in het rapport dat aangehaalde bepalingen verificatie behoeven.
 
 ## Juridische context van NDA's in Nederland
 
