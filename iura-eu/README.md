@@ -1,12 +1,12 @@
-# IURA Plugin (EU) — Coming Soon
+# IURA Plugin (EU)
 
 AI plugin for EU law practitioners, designed for [Cowork](https://claude.com/product/cowork) — also works in Claude Code.
 
 Integrated with **IURA MCP** — legal knowledge base for European Union law, covering case law from the highest European courts and the complete EU legislative acquis.
 
-> **Status:** This plugin is currently under development. We're building the MCP connectors, skills, and data pipelines. Stay tuned.
+> **Disclaimer:** This plugin supports legal work; it does not provide legal advice. Every output is a draft for review by a qualified lawyer.
 
-## What's Coming
+## Coverage
 
 ### Case Law
 
@@ -32,16 +32,18 @@ Integrated with **IURA MCP** — legal knowledge base for European Union law, co
 
 Full legislative texts with consolidated versions, tracking amendments over time.
 
-## Planned Skills
+## Skills
 
 | Skill | Description |
 |-------|-------------|
-| **iura** | Legal research across ECtHR case law, CJEU rulings, and EU legislation |
-| **eu-legal-memo** | Legal memoranda with IRAC analysis under EU law — cross-referencing Treaty provisions, secondary legislation, and court jurisprudence |
-| **gdpr-compliance** | GDPR compliance analysis — mapping data processing activities against the Regulation, EDPB guidelines, and CJEU/national DPA case law |
-| **eu-contract-review** | Contract review focusing on EU regulatory dimensions — competition law (Art. 101-102 TFEU), state aid, data protection, digital services |
+| **eu-legal-research** | EU legal research across EUR-Lex legislation, CJEU and General Court case law, and ECtHR case law, with national-transposition checks |
+| **eu-legal-memo** | Objective legal memoranda under EU law — Treaty provisions, secondary legislation and case-law |
+| **eu-preliminary-reference** | Drafting or assessing a request for a preliminary ruling under Art. 267 TFEU |
+| **eu-annulment-action** | Admissibility and merits assessment of an action for annulment under Art. 263 TFEU, with an application outline |
+| **eu-gdpr-compliance** | GDPR compliance analysis and DPIA-style assessment, with a gap list and risk ratings |
+| **eu-competition-state-aid** | Assessment of agreements and conduct under Arts 101-102 TFEU and of measures under the State-aid rules (Arts 107-108 TFEU) |
 
-## Planned MCP Databases
+## MCP Tools
 
 ```
 IURA MCP (EU)
@@ -62,6 +64,3 @@ EU law is uniquely challenging for AI-assisted legal research because of its mul
 
 A legal question in any EU member state often requires navigating all four layers simultaneously. IURA MCP will make this cross-referencing seamless.
 
-## Timeline
-
-We're actively building. Follow [@iaborucki](https://x.com/iaborucki) for updates.

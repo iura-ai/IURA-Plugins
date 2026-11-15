@@ -1,0 +1,8 @@
+{
+  "name": "iura-se",
+  "version": "1.0.0",
+  "description": "IURA-plugin för svenska juristteam. Juridisk research, juridisk PM, avtalsgranskning, NDA-granskning, tabellgranskning av dokument samt stämningsansökan och svaromål enligt rättegångsbalken — med IURA MCP-integration (SFS, Högsta domstolen, HFD, hovrätterna, kammarrätterna, Arbetsdomstolen och specialdomstolarna).",
+  "author": {
+    "name": "IURA"
+  }
+}
