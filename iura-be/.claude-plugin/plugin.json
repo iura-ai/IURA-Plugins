@@ -1,0 +1,8 @@
+{
+  "name": "iura-be",
+  "version": "1.0.0",
+  "description": "IURA-plugin voor Belgische juridische teams / plugin IURA pour les équipes juridiques belges. Juridisch onderzoek, juridische nota, contractbeoordeling (nieuw Burgerlijk Wetboek), NDA-triage, dagvaarding en conclusies — recherche juridique, note juridique, revue de contrats (nouveau Code civil), triage NDA, citation et conclusions — met IURA MCP-integratie (Justel, JUPORTAL, Grondwettelijk Hof / Cour constitutionnelle, Raad van State / Conseil d'État).",
+  "author": {
+    "name": "IURA"
+  }
+}

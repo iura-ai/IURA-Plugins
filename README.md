@@ -22,7 +22,10 @@ The plugins are great standalone. With IURA MCP, they're complete.
 | Plugin | Description | Status |
 |--------|-------------|--------|
 | **[iura-pl](./iura-pl)** | Polish legal workflows: contract review, NDA triage, NDA generation, legal memos, bulk document review. | Active |
-| **[iura-nl](./iura-nl)** | Dutch legal workflows. | In preparation |
+| **[iura-nl](./iura-nl)** | Dutch legal workflows: contract review, NDA triage and drafting, legal memos, tabular review, statement of defence. | Active |
+| **[iura-se](./iura-se)** | Swedish legal workflows: research, legal memo (PM), contract and NDA review, tabular review, stämningsansökan and svaromål. | Active |
+| **[iura-be](./iura-be)** | Belgian legal workflows (Dutch/French): research, legal memo, contract review under the new Civil Code, NDA triage, dagvaarding/citation and conclusies/conclusions. | Active |
+| **[iura-eu](./iura-eu)** | EU law workflows: research, legal memo, preliminary references, actions for annulment, GDPR/DPIA, competition and State aid. | Active |
 
 ## Getting Started
 
@@ -39,8 +42,11 @@ claude plugin marketplace add iura-ai/iura-plugins
 # Install the Polish plugin (includes IURA MCP)
 claude plugin install iura-pl@iura-plugins
 
-# Install the Dutch plugin (in preparation)
+# Install the Dutch, Swedish, Belgian or EU plugin
 claude plugin install iura-nl@iura-plugins
+claude plugin install iura-se@iura-plugins
+claude plugin install iura-be@iura-plugins
+claude plugin install iura-eu@iura-plugins
 ```
 
 Once installed, the plugin activates automatically. Skills fire when relevant, and slash commands are available in your session.
