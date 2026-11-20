@@ -53,7 +53,7 @@ Po zebraniu stanu faktycznego, ZANIM zaczniesz pisać pozew, MUSISZ przeprowadzi
 
 Wykonaj **równoległe** zapytania do minimum 3-4 z poniższych narzędzi (dobierz do typu sprawy):
 
-**search_polish_legislation** (Dziennik Ustaw) — zawsze:
+**search_polish_consolidated_statutes** (teksty jednolite ustaw) — zawsze:
 - Przepisy materialnoprawne stanowiące podstawę roszczenia (np. art. 471 KC dla odpowiedzialności kontraktowej, art. 415 KC dla deliktowej, art. 405/410 KC dla bezpodstawnego wzbogacenia)
 - Przepisy procesowe: art. 126, 187 KPC (wymogi formalne), art. 189 KPC (jeśli powództwo o ustalenie)
 - Przepisy szczególne właściwe dla danej dziedziny (prawo bankowe, ustawa o ochronie konsumentów, prawo pracy, kodeks spółek handlowych, itp.)
@@ -683,7 +683,7 @@ Po wygenerowaniu pozwu, przeprowadź samoweryfikację:
 
 1. **Nie ograniczaj długości** — pozew ma być tak długi, jak wymaga sprawa. Profesjonalne pozwy mają regularnie 30-80 stron.
 
-2. **Zawsze szukaj w IuraMCP** — nigdy nie cytuj przepisów i orzeczeń z pamięci. Zawsze użyj search_polish_legislation dla przepisów i search_polish_supreme_court_rulings/search_polish_common_court_rulings dla orzecznictwa. Podawaj rzeczywiste sygnatury i daty.
+2. **Zawsze szukaj w IuraMCP** — nigdy nie cytuj przepisów i orzeczeń z pamięci. Zawsze użyj search_polish_consolidated_statutes dla przepisów i search_polish_supreme_court_rulings/search_polish_common_court_rulings dla orzecznictwa. Podawaj rzeczywiste sygnatury i daty.
 
 3. **Subsumpcja jest obowiązkowa** — nie wystarczy napisać „roszczenie jest zasadne na podstawie art. X". Musisz rozbić normę na przesłanki i udowodnić każdą z osobna.
 

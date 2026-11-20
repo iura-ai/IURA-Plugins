@@ -10,13 +10,13 @@ description: >
 
 Skill generuje pismo procesowe strony powodowej o cofnięcie pozwu wraz ze zrzeczeniem się roszczenia, przeznaczone do złożenia w sądzie cywilnym. Pismo jest generowane w formacie `.docx` zgodnie ze standardami polskiej praktyki procesowej.
 
-> **Wymagane narzędzia:** Skill wymaga dostępu do `search_polish_legislation` (Dziennik Ustaw) z serwera IURA MCP w celu weryfikacji aktualnego brzmienia przepisów. Bez tego narzędzia **nie generuj pisma** — ryzyko powołania się na nieaktualne lub nieistniejące przepisy.
+> **Wymagane narzędzia:** Skill wymaga dostępu do `search_polish_consolidated_statutes` (teksty jednolite ustaw) z serwera IURA MCP w celu weryfikacji aktualnego brzmienia przepisów. Bez tego narzędzia **nie generuj pisma** — ryzyko powołania się na nieaktualne lub nieistniejące przepisy.
 
 ---
 
 ## ZASADA FUNDAMENTALNA: Weryfikacja podstaw prawnych przed generowaniem
 
-**ZAWSZE przed napisaniem pisma wywołaj `search_polish_legislation`** aby zweryfikować aktualne brzmienie przepisów dotyczących:
+**ZAWSZE przed napisaniem pisma wywołaj `search_polish_consolidated_statutes`** aby zweryfikować aktualne brzmienie przepisów dotyczących:
 
 1. **Cofnięcia pozwu i zrzeczenia się roszczenia** — zapytanie: `"cofnięcie pozwu zrzeczenie się roszczenia zgoda pozwanego umorzenie postępowania"` z kontekstem opisującym sytuację użytkownika
 2. **Wymogów formalnych pisma procesowego** — zapytanie: `"wymogi formalne pisma procesowego oznaczenie stron sygnatura akt"` z kontekstem dotyczącym rodzaju pisma
@@ -24,7 +24,7 @@ Skill generuje pismo procesowe strony powodowej o cofnięcie pozwu wraz ze zrzec
 
 Parametr `in_force_as_of` ustaw na **dzisiejszą datę**.
 
-Dopiero po uzyskaniu wyników z search_polish_legislation przystąp do generowania pisma. Powołuj się wyłącznie na przepisy potwierdzone wynikami wyszukiwania.
+Dopiero po uzyskaniu wyników z search_polish_consolidated_statutes przystąp do generowania pisma. Powołuj się wyłącznie na przepisy potwierdzone wynikami wyszukiwania.
 
 ---
 
@@ -112,7 +112,7 @@ adres dla doręczeń:
 
 Każdy element (imię, adres, identyfikator, e-mail, dane pełnomocnika, adres do doręczeń) umieszczaj w **osobnym wierszu** z wcięciem. Fraza „reprezentowany przez:" poprzedza dane pełnomocnika. Fraza „adres dla doręczeń:" poprzedza adres do korespondencji.
 
-Oznaczenie stron musi być zgodne z wymogami formalnymi pisma procesowego wynikającymi z przepisów KPC (zweryfikuj przez search_polish_legislation).
+Oznaczenie stron musi być zgodne z wymogami formalnymi pisma procesowego wynikającymi z przepisów KPC (zweryfikuj przez search_polish_consolidated_statutes).
 
 ### 4. SYGNATURA AKT
 
@@ -149,7 +149,7 @@ Funkcja: Wskazuje przyczynę czynności procesowej. Sąd bada, czy cofnięcie po
 **c) Oświadczenie o cofnięciu pozwu ze zrzeczeniem się roszczenia** — rdzeń pisma:
 > „…niniejszym cofam Pozew wraz z zrzeczeniem się roszczenia dochodzonego w niniejszej sprawie, …"
 
-Funkcja: Jest to czynność dyspozytywna strony powodowej — połączenie cofnięcia pozwu z zrzeczeniem się roszczenia ma kluczowe znaczenie procesowe, ponieważ eliminuje konieczność uzyskania zgody strony pozwanej na cofnięcie (zweryfikuj aktualny stan tego przepisu przez search_polish_legislation). Bez zrzeczenia się roszczenia, po rozpoczęciu rozprawy wymagana jest zgoda pozwanego.
+Funkcja: Jest to czynność dyspozytywna strony powodowej — połączenie cofnięcia pozwu z zrzeczeniem się roszczenia ma kluczowe znaczenie procesowe, ponieważ eliminuje konieczność uzyskania zgody strony pozwanej na cofnięcie (zweryfikuj aktualny stan tego przepisu przez search_polish_consolidated_statutes). Bez zrzeczenia się roszczenia, po rozpoczęciu rozprawy wymagana jest zgoda pozwanego.
 
 **d) Rozstrzygnięcie o kosztach** — opcjonalne, ale rekomendowane:
 > „…jak również zrzekam się roszczeń dotyczących zwrotu przez Stronę Pozwaną kosztów procesu i zastępstwa procesowego."
@@ -211,11 +211,11 @@ Strona działa we własnym imieniu — brak frazy o pełnomocnictwie. W kosztach
 W związku z [PRZYCZYNA COFNIĘCIA, np. „zawarciem w dniu [DATA] r. ugody ze Stroną Pozwaną, dotyczącej ..."], niniejszym cofam Pozew wraz z zrzeczeniem się roszczenia dochodzonego w niniejszej sprawie, jak również zrzekam się roszczeń dotyczących zwrotu przez Stronę Pozwaną kosztów procesu.
 ```
 
-**WAŻNE O ETAPIE POSTĘPOWANIA:** Połączenie cofnięcia pozwu ze zrzeczeniem się roszczenia jest kluczowe procesowo — eliminuje wymóg zgody pozwanego niezależnie od etapu postępowania. Jeśli jednak użytkownik chce cofnąć pozew **bez** zrzeczenia się roszczenia, poinformuj go, że po rozpoczęciu rozprawy wymagana będzie zgoda pozwanego (zweryfikuj aktualny stan tego przepisu przez search_polish_legislation). Skill domyślnie generuje wariant **ze** zrzeczeniem się roszczenia — chyba że użytkownik wyraźnie poprosi o inny wariant.
+**WAŻNE O ETAPIE POSTĘPOWANIA:** Połączenie cofnięcia pozwu ze zrzeczeniem się roszczenia jest kluczowe procesowo — eliminuje wymóg zgody pozwanego niezależnie od etapu postępowania. Jeśli jednak użytkownik chce cofnąć pozew **bez** zrzeczenia się roszczenia, poinformuj go, że po rozpoczęciu rozprawy wymagana będzie zgoda pozwanego (zweryfikuj aktualny stan tego przepisu przez search_polish_consolidated_statutes). Skill domyślnie generuje wariant **ze** zrzeczeniem się roszczenia — chyba że użytkownik wyraźnie poprosi o inny wariant.
 
 ### 7. OŚWIADCZENIE O DORĘCZENIU
 
-Osobny akapit zawierający oświadczenie o wysłaniu odpisu pisma stronie przeciwnej lub jej pełnomocnikowi. Konkretny artykuł KPC zweryfikuj przez search_polish_legislation (szukaj: „doręczenie pisma procesowego operator pocztowy wyznaczony"). Nie wpisuj artykułu z pamięci.
+Osobny akapit zawierający oświadczenie o wysłaniu odpisu pisma stronie przeciwnej lub jej pełnomocnikowi. Konkretny artykuł KPC zweryfikuj przez search_polish_consolidated_statutes (szukaj: „doręczenie pisma procesowego operator pocztowy wyznaczony"). Nie wpisuj artykułu z pamięci.
 
 Wybierz odpowiedni wariant oświadczenia o doręczeniu w zależności od okoliczności:
 
@@ -298,15 +298,15 @@ Po zebraniu danych i weryfikacji podstaw prawnych, wygeneruj pismo w formacie `.
 ## Schemat wywoływania narzędzi — podsumowanie
 
 ```
-1. search_polish_legislation: "cofnięcie pozwu zrzeczenie się roszczenia zgoda pozwanego umorzenie postępowania"
+1. search_polish_consolidated_statutes: "cofnięcie pozwu zrzeczenie się roszczenia zgoda pozwanego umorzenie postępowania"
    → kontekst: sytuacja użytkownika
    → in_force_as_of: dzisiejsza data
 
-2. search_polish_legislation: "wymogi formalne pisma procesowego oznaczenie stron sygnatura akt"
+2. search_polish_consolidated_statutes: "wymogi formalne pisma procesowego oznaczenie stron sygnatura akt"
    → kontekst: pismo o cofnięcie pozwu w postępowaniu cywilnym
    → in_force_as_of: dzisiejsza data
 
-3. search_polish_legislation: "doręczenie odpisu pisma procesowego pełnomocnikowi strony przeciwnej operator pocztowy"
+3. search_polish_consolidated_statutes: "doręczenie odpisu pisma procesowego pełnomocnikowi strony przeciwnej operator pocztowy"
    → kontekst: obowiązek wysłania odpisu pisma do strony przeciwnej
    → in_force_as_of: dzisiejsza data
 
@@ -314,7 +314,7 @@ Po zebraniu danych i weryfikacji podstaw prawnych, wygeneruj pismo w formacie `.
 5. Wygeneruj .docx zgodnie ze strukturą powyżej
 ```
 
-**NIGDY nie wpisuj numerów artykułów z pamięci.** Każdy powołany przepis musi pochodzić z wyników search_polish_legislation.
+**NIGDY nie wpisuj numerów artykułów z pamięci.** Każdy powołany przepis musi pochodzić z wyników search_polish_consolidated_statutes.
 
 ---
 
@@ -322,14 +322,14 @@ Po zebraniu danych i weryfikacji podstaw prawnych, wygeneruj pismo w formacie `.
 
 Przed zapisaniem finalnego pliku sprawdź:
 
-- [ ] Wywołano search_polish_legislation i zweryfikowano podstawy prawne
+- [ ] Wywołano search_polish_consolidated_statutes i zweryfikowano podstawy prawne
 - [ ] Wszystkie pola wymagane zostały uzupełnione danymi od użytkownika
 - [ ] Struktura pisma jest zgodna z wzorcem (9 elementów w prawidłowej kolejności)
 - [ ] Treść merytoryczna stanowi zwięzłe, ciągłe oświadczenie procesowe (jedno nieprzerwane zdanie)
 - [ ] Schemat argumentacji zachowany: legitymacja → przyczyna → oświadczenie o cofnięciu → koszty
 - [ ] Użyto odpowiedniego wariantu frazy (A–E) dopasowanego do okoliczności
 - [ ] Wielkie litery dla ról procesowych: „Strona Powodowa", „Strona Pozwana", „Pozew"
-- [ ] Numery artykułów KPC pochodzą z wyników search_polish_legislation, nie z pamięci
+- [ ] Numery artykułów KPC pochodzą z wyników search_polish_consolidated_statutes, nie z pamięci
 - [ ] Oświadczenie o doręczeniu jest spójne z okolicznościami (pełnomocnik vs. strona, załączniki vs. brak, poczta vs. elektronicznie)
 - [ ] Formatowanie .docx jest zgodne z wytycznymi
 - [ ] Polskie znaki diakrytyczne wyświetlają się poprawnie

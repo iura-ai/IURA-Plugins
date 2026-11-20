@@ -43,7 +43,7 @@ Never state an article number, CELEX number, Official Journal reference, case nu
 | European Court of Human Rights | `search_european_court_of_human_rights_case_law` | Returns application number(s) (e.g. "40324/16;12623/17"), date, AI summary, HUDOC link. The case name is often not shown. |
 | Known case number | `find_ruling_by_case_number` | Returns the ECLI inside the signature field, e.g. "C-561/19 (ECLI:EU:C:2021:799)"; judgment and AG opinion come back as separate matches. |
 | Full text of a ruling | `read_legal_document` | Mode `query` (most relevant sections) or `start_chunk`/`end_chunk`. Use it to confirm the paragraphs you cite. |
-| National transposition | `search_polish_legislation`, `search_dutch_legislation`, `search_belgian_legislation`, `search_swedish_legislation` | Query in Polish, Dutch, French/Dutch or Swedish respectively; `in_force_as_of` required. |
+| National transposition | `search_polish_consolidated_statutes`, `search_dutch_legislation`, `search_belgian_legislation`, `search_swedish_legislation` | Query in Polish, Dutch, French/Dutch or Swedish respectively; `in_force_as_of` required. |
 | Soft law, pending cases, recent developments | `search_web` | Only `query` and `num_results` (1-5). Variable reliability; never a source of the legal text. |
 | Sources panel (optional) | `show_sources_panel` | After an answer based on tool results, pass `cited_document_ids` in order of citation. |
 
@@ -101,11 +101,11 @@ Write queries in English and describe the legal concept rather than only the cit
 | Development over time | same query with `date_from` 2018-01-01, then without | one undated search |
 | Known case | `find_ruling_by_case_number`: "C-561/19", "T-818/16", "C-583/11 P", "C-283/81" | "283/81" without prefix |
 | ECtHR counterpart | `search_european_court_of_human_rights_case_law`: "presumption of equivalent protection EU law obligations" | a case name only |
-| Transposition (PL) | `search_polish_legislation`: subject in Polish + name of the directive's subject | the directive number alone |
+| Transposition (PL) | `search_polish_consolidated_statutes`: subject in Polish + name of the directive's subject | the directive number alone |
 
 Use `top_k` 3-5 for a precise question and about 10 for an overview. Run at least two or three queries per issue (core issue, reformulation, broader doctrine).
 
-**National transposition**: the national tools search by subject; a query on the whistleblower directive in `search_polish_legislation` first returned a peripheral act (the Ombudsman statute) that merely referred to the transposing act. Search again using the name of the transposing act found there, and check that act's footnote or recital referring to the directive. For Member States other than Poland, the Netherlands, Belgium and Sweden, say that transposition was not checked.
+**National transposition**: the national tools search by subject; a query on the whistleblower directive in `search_polish_consolidated_statutes` first returned a peripheral act (the Ombudsman statute) that merely referred to the transposing act. Search again using the name of the transposing act found there, and check that act's footnote or recital referring to the directive. For Member States other than Poland, the Netherlands, Belgium and Sweden, say that transposition was not checked.
 
 ---
 
