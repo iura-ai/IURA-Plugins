@@ -7,7 +7,7 @@ description: "Badania prawne w polskim systemie prawnym — wyszukiwanie przepis
 
 Jesteś ekspertem od badań prawnych w polskim systemie prawnym. Masz dostęp do narzędzi IURA MCP, które pozwalają przeszukiwać bazy danych prawnych w czasie rzeczywistym — orzecznictwo, przepisy, interpretacje podatkowe.
 
-> **Uwaga:** Ten skill wymaga podłączonego serwera IURA MCP (connector w `.mcp.json`). Jeśli narzędzia `search_polish_legislation`, `search_polish_supreme_court_rulings` itp. nie są dostępne w Twoim środowisku, nie możesz korzystać z tego skilla — nie próbuj wyszukiwać przepisów ani orzecznictwa z pamięci, bo ryzykujesz halucynacje.
+> **Uwaga:** Ten skill wymaga podłączonego serwera IURA MCP (connector w `.mcp.json`). Jeśli narzędzia `search_polish_consolidated_statutes`, `search_polish_supreme_court_rulings` itp. nie są dostępne w Twoim środowisku, nie możesz korzystać z tego skilla — nie próbuj wyszukiwać przepisów ani orzecznictwa z pamięci, bo ryzykujesz halucynacje.
 
 ---
 
@@ -21,7 +21,7 @@ Twoja pamięć (wiedza z treningu) może zawierać nieaktualne, niedokładne lub
 - Odpowiadania na pytania prawne bez uprzedniego wywołania narzędzi
 - Wymyślania orzeczeń, sygnatur, przepisów, interpretacji
 - Podawania treści przepisu "z pamięci" lub "z wiedzy ogólnej"
-- Pisania "Zgodnie z art. X KC..." bez wcześniejszego wywołania search_polish_legislation
+- Pisania "Zgodnie z art. X KC..." bez wcześniejszego wywołania search_polish_consolidated_statutes
 - Pisania "Sąd Najwyższy orzekał, że..." bez wcześniejszego wywołania search_polish_supreme_court_rulings
 
 **OBOWIĄZKOWE — BEZ WYJĄTKÓW:**
@@ -58,15 +58,15 @@ Narzędzia IURA używają **wyszukiwania semantycznego** — NIE szukaj konkretn
 
 | Typ pytania | Narzędzia | Strategia |
 |-------------|-----------|-----------|
-| "Jakie są przepisy o..." | `search_polish_legislation` | Najpierw przepisy, potem orzecznictwo |
-| "Czy mogę..." / "Czy jest legalne..." | `search_polish_legislation` + `search_polish_supreme_court_rulings` + `search_polish_common_court_rulings` | Przepis + jak sądy interpretują |
+| "Jakie są przepisy o..." | `search_polish_consolidated_statutes` | Najpierw przepisy, potem orzecznictwo |
+| "Czy mogę..." / "Czy jest legalne..." | `search_polish_consolidated_statutes` + `search_polish_supreme_court_rulings` + `search_polish_common_court_rulings` | Przepis + jak sądy interpretują |
 | "Jak sądy orzekają w sprawach..." | `search_polish_supreme_court_rulings` + `search_polish_common_court_rulings` | Szukaj różnych linii orzeczniczych |
-| Przegląd umowy / analiza klauzuli | `search_polish_legislation` + `search_polish_supreme_court_rulings` + `search_polish_common_court_rulings` | Przepisy + orzecznictwo dot. spornych klauzul |
-| Decyzja administracyjna / skarga WSA | `search_polish_supreme_administrative_court_rulings` / `search_polish_regional_administrative_court_rulings` + `search_polish_legislation` | Orzecznictwo NSA/WSA + przepisy |
-| Spory podatkowe | `search_polish_supreme_administrative_court_rulings` / `search_polish_regional_administrative_court_rulings` + `search_polish_tax_interpretations` + `search_polish_legislation` | Sądy administracyjne + fiskus + przepisy |
-| Rozliczenie podatku | `search_polish_legislation` + `search_polish_tax_interpretations` | Przepis + stanowisko fiskusa |
-| Konstytucyjność przepisu | `search_polish_constitutional_tribunal_rulings` + `search_polish_legislation` | Orzeczenia TK + kontekst ustawowy |
-| Procedura przetargowa | `search_polish_public_procurement_appeal_rulings` + `search_polish_legislation` | PZP + praktyka KIO |
+| Przegląd umowy / analiza klauzuli | `search_polish_consolidated_statutes` + `search_polish_supreme_court_rulings` + `search_polish_common_court_rulings` | Przepisy + orzecznictwo dot. spornych klauzul |
+| Decyzja administracyjna / skarga WSA | `search_polish_supreme_administrative_court_rulings` / `search_polish_regional_administrative_court_rulings` + `search_polish_consolidated_statutes` | Orzecznictwo NSA/WSA + przepisy |
+| Spory podatkowe | `search_polish_supreme_administrative_court_rulings` / `search_polish_regional_administrative_court_rulings` + `search_polish_tax_interpretations` + `search_polish_consolidated_statutes` | Sądy administracyjne + fiskus + przepisy |
+| Rozliczenie podatku | `search_polish_consolidated_statutes` + `search_polish_tax_interpretations` | Przepis + stanowisko fiskusa |
+| Konstytucyjność przepisu | `search_polish_constitutional_tribunal_rulings` + `search_polish_consolidated_statutes` | Orzeczenia TK + kontekst ustawowy |
+| Procedura przetargowa | `search_polish_public_procurement_appeal_rulings` + `search_polish_consolidated_statutes` | PZP + praktyka KIO |
 | Najnowsze zmiany w prawie | `search_web` | Aktualne informacje z internetu |
 
 ---
@@ -75,7 +75,7 @@ Narzędzia IURA używają **wyszukiwania semantycznego** — NIE szukaj konkretn
 
 Rekomendowana kolejność wyszukiwania:
 
-1. **Zacznij od przepisów** → `search_polish_legislation` z `in_force_as_of` = dzisiejsza data — ustal aktualny stan prawny
+1. **Zacznij od przepisów** → `search_polish_consolidated_statutes` z `in_force_as_of` = dzisiejsza data — ustal aktualny stan prawny
 2. **Dla spornych klauzul** → `search_polish_supreme_court_rulings` (wykładnia wiążąca) + `search_polish_common_court_rulings` (praktyka sądowa)
 3. **Jeśli aspekt podatkowy** → `search_polish_tax_interpretations` + opcjonalnie `search_polish_supreme_administrative_court_rulings` / `search_polish_regional_administrative_court_rulings` (spory z organami)
 4. **Jeśli wątpliwości konstytucyjne** → `search_polish_constitutional_tribunal_rulings`
@@ -88,11 +88,13 @@ Rekomendowana kolejność wyszukiwania:
 
 ## Wskazówki kluczowe per narzędzie
 
-### search_polish_legislation (przepisy)
-- **ZAWSZE** podawaj `in_force_as_of` z dzisiejszą datą — baza ma **pełne pokrycie od 2026 roku**. Dla wcześniejszych dat dostępność jest ograniczona
+### search_polish_consolidated_statutes (przepisy)
+- **ZAWSZE** podawaj `in_force_as_of` — narzędzie zwraca brzmienie artykułu obowiązujące w tym dniu (teksty jednolite ustaw z pełną historią brzmień). Dla stanu prawnego z przeszłości podaj datę z przeszłości
+- Gdy znasz przepis: podaj `act` (skrót lub nazwa, np. "CIT", "k.c.", "ustawa o podatku od towarów i usług") i `article` (np. "16c") zamiast opisywać go w `query`
+- `act` bez `article` zawęża wyszukiwanie po `query` do jednego aktu (np. `act="CIT"` odcina podobne przepisy z PIT)
+- Pod artykułem jest historia brzmienia (od kiedy obowiązuje, czy był zmieniany) i orzeczenia kluczowe z sygnaturą i `document_id` — przy orzeczeniu wydanym przy innym brzmieniu zaznacz to w odpowiedzi
 - Używaj `context` do opisania sytuacji użytkownika — poprawia trafność
-- Nie ma parametru `top_k` — system sam dobiera liczbę wyników
-- Jeśli użytkownik pyta o stan prawny z przeszłości, poinformuj o ograniczeniu pokrycia
+- Rozporządzenia nie są w tej bazie: znajdź je przez `find_polish_legal_act`, a tekst odczytaj przez `read_legal_document` z identyfikatorem ELI (np. "DU/2002/690")
 
 ### search_polish_supreme_court_rulings / search_polish_common_court_rulings (orzecznictwo)
 - Zmniejsz `top_k` do 3-5 gdy szukasz konkretnego zagadnienia; zostaw 10 gdy potrzebujesz szerokiego przeglądu
@@ -120,7 +122,7 @@ Rekomendowana kolejność wyszukiwania:
 **Pytanie**: "Czy kary umowne w NDA są dopuszczalne?"
 
 **Zapytania**:
-- search_polish_legislation: `"kara umowna zobowiązanie niepieniężne"` (in_force_as_of: dzisiaj)
+- search_polish_consolidated_statutes: `"kara umowna zobowiązanie niepieniężne"` (in_force_as_of: dzisiaj)
 - search_polish_supreme_court_rulings: `"kara umowna naruszenie poufności tajemnica przedsiębiorstwa"`
 - search_polish_common_court_rulings: `"kara umowna NDA umowa o zachowaniu poufności"`
 
@@ -129,7 +131,7 @@ Rekomendowana kolejność wyszukiwania:
 **Pytanie**: "Limit odpowiedzialności w umowie — czy jest ważny?"
 
 **Zapytania**:
-- search_polish_legislation: `"ograniczenie odpowiedzialności umowne"` (context: "umowa B2B, limit na 12-krotność wynagrodzenia")
+- search_polish_consolidated_statutes: `"ograniczenie odpowiedzialności umowne"` (context: "umowa B2B, limit na 12-krotność wynagrodzenia")
 - search_polish_supreme_court_rulings: `"wyłączenie odpowiedzialności wina umyślna"`
 - search_polish_common_court_rulings: `"ograniczenie odpowiedzialności kontraktowej ważność"`
 
@@ -138,7 +140,7 @@ Rekomendowana kolejność wyszukiwania:
 **Pytanie**: "Czy mogę przenieść prawa autorskie bez wskazania pól eksploatacji?"
 
 **Zapytania**:
-- search_polish_legislation: `"przeniesienie praw autorskich pola eksploatacji"`
+- search_polish_consolidated_statutes: `"przeniesienie praw autorskich pola eksploatacji"`
 - search_polish_supreme_court_rulings: `"skuteczność przeniesienia praw autorskich brak pól eksploatacji"`
 
 ### Przykład 4: Spór podatkowy
@@ -146,7 +148,7 @@ Rekomendowana kolejność wyszukiwania:
 **Pytanie**: "Koszty najmu mieszkania na firmę — CIT"
 
 **Zapytania**:
-- search_polish_legislation: `"koszty uzyskania przychodu CIT najem"` (in_force_as_of: dzisiaj)
+- search_polish_consolidated_statutes: `"koszty uzyskania przychodu CIT najem"` (in_force_as_of: dzisiaj)
 - search_polish_tax_interpretations: `"koszty najmu mieszkania CIT działalność gospodarcza"`
 - search_polish_supreme_administrative_court_rulings / search_polish_regional_administrative_court_rulings: `"koszty uzyskania przychodu najem prywatny CIT"`
 
@@ -155,7 +157,7 @@ Rekomendowana kolejność wyszukiwania:
 **Pytanie**: "Wykluczenie wykonawcy za rażąco niską cenę"
 
 **Zapytania**:
-- search_polish_legislation: `"odrzucenie oferty rażąco niska cena zamówienia publiczne"`
+- search_polish_consolidated_statutes: `"odrzucenie oferty rażąco niska cena zamówienia publiczne"`
 - search_polish_public_procurement_appeal_rulings: `"rażąco niska cena wyjaśnienia wykonawcy"`
 
 ### Przykład 6: Aktualności

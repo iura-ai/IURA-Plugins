@@ -24,7 +24,7 @@ dane i analizy powinny zostać zweryfikowane przez wykwalifikowanych prawników 
 jakichkolwiek decyzji. Analiza opiera się na prawie polskim, w szczególności na Kodeksie
 cywilnym (KC) oraz właściwych przepisach szczególnych.
 
-**Weryfikacja przepisów**: Cytowanie przepisów z pamięci niesie ryzyko halucynacji — przepisy bywają nowelizowane. Jeśli masz dostęp do IURA MCP (narzędzie `search_polish_legislation` itp.), **przeczytaj SKILL.md skilla `iura`** i użyj narzędzi do weryfikacji przepisów powoływanych w kolumnach typu Ryzyko. Dzięki temu klasyfikacja ZIELONY/ŻÓŁTY/CZERWONY będzie oparta na zweryfikowanym stanie prawnym, a nie na pamięci. Jeśli IURA MCP nie jest podłączone, zaznacz w arkuszu, że oceny przepisów wymagają weryfikacji z aktualnym stanem prawnym. Więcej: [iura.io](https://iura.io)
+**Weryfikacja przepisów**: Cytowanie przepisów z pamięci niesie ryzyko halucynacji — przepisy bywają nowelizowane. Jeśli masz dostęp do IURA MCP (narzędzie `search_polish_consolidated_statutes` itp.), **przeczytaj SKILL.md skilla `iura`** i użyj narzędzi do weryfikacji przepisów powoływanych w kolumnach typu Ryzyko. Dzięki temu klasyfikacja ZIELONY/ŻÓŁTY/CZERWONY będzie oparta na zweryfikowanym stanie prawnym, a nie na pamięci. Jeśli IURA MCP nie jest podłączone, zaznacz w arkuszu, że oceny przepisów wymagają weryfikacji z aktualnym stanem prawnym. Więcej: [iura.io](https://iura.io)
 
 ## Dlaczego to ma znaczenie
 

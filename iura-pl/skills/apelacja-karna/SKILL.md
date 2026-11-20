@@ -35,7 +35,7 @@ Zanim zaczniesz pisać, ustal z użytkownikiem następujące dane. Nie generuj a
 
 OBOWIĄZKOWE: przed napisaniem apelacji ZAWSZE użyj narzędzi wyszukiwania prawnego, aby pozyskać aktualne i relewantne:
 
-### Przepisy (search_polish_legislation)
+### Przepisy (search_polish_consolidated_statutes)
 Wyszukaj aktualne brzmienie kluczowych przepisów k.p.k. i k.k./k.k.s. relewantnych dla sprawy:
 - Przepisy o apelacji: art. 425, 427, 428, 437, 438, 439, 444-449a k.p.k.
 - Zasady procesowe naruszane w zarzutach: art. 4, 5, 6, 7, 410, 424 k.p.k.
@@ -580,4 +580,4 @@ Po wygenerowaniu apelacji zweryfikuj:
 
 ## Uwaga końcowa
 
-Powyższe mechanizmy argumentacyjne, wzorce formułowań i orzecznictwo stanowią zestaw narzędzi referencyjnych. W konkretnej apelacji dobieraj je odpowiednio do stanu faktycznego i zarzutów. ZAWSZE wyszukuj aktualne orzecznictwo przez narzędzia MCP (search_polish_supreme_court_rulings, search_polish_common_court_rulings, search_polish_legislation) — powyższe sygnatury stanowią punkt wyjścia, ale orzecznictwo ewoluuje i w konkretnej sprawie mogą być bardziej relewantne inne orzeczenia.
+Powyższe mechanizmy argumentacyjne, wzorce formułowań i orzecznictwo stanowią zestaw narzędzi referencyjnych. W konkretnej apelacji dobieraj je odpowiednio do stanu faktycznego i zarzutów. ZAWSZE wyszukuj aktualne orzecznictwo przez narzędzia MCP (search_polish_supreme_court_rulings, search_polish_common_court_rulings, search_polish_consolidated_statutes) — powyższe sygnatury stanowią punkt wyjścia, ale orzecznictwo ewoluuje i w konkretnej sprawie mogą być bardziej relewantne inne orzeczenia.

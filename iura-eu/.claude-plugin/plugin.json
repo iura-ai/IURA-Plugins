@@ -1,6 +1,6 @@
 {
   "name": "iura-eu",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "IURA plugin for EU law practitioners. EU legal research, legal memos, requests for a preliminary ruling (Art. 267 TFEU), actions for annulment (Art. 263 TFEU), GDPR compliance and DPIA analysis, and competition / State-aid assessments grounded in EU treaties, regulations, directives, and CJEU / ECtHR case-law — with IURA MCP integration for European legal sources.",
   "author": {
     "name": "IURA"
